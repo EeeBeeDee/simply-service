@@ -1,1 +1,1 @@
-web: gunicorn i_think.wsgi
+web: gunicorn simply_service.wsgi
