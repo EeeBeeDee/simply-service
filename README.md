@@ -47,7 +47,10 @@ This includes the model setup for the booking system and profiles the two essent
 
 ### Wireframes 
 
-Using [Balsamiq](https://balsamiq.com/wireframes/)
+Using [Balsamiq](https://balsamiq.com/wireframes/) I created the skeleton and initial layout.
+
+### Schema
+
 
 
 
