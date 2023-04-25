@@ -42,7 +42,7 @@
                                 </div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="date" required>
+										<input id="date" class="form-control" type="date" required>
 										<span class="form-label">Date</span>
 									</div>
 								</div>
@@ -72,7 +72,7 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="tel" placeholder="Enter you Phone">
+										<input required class="form-control" type="tel" placeholder="Enter you Phone">
 										<span class="form-label">Phone</span>
 									</div>
 								</div>
@@ -89,24 +89,7 @@
 
 	<script src="{% static 'bookings/js/jquery.min.js' %}"></script>
 	<script src="{% static 'bookings/js/app.js' %}"></script>
-	<script>
-		$('.form-control').each(function () {
-			floatedLabel($(this));
-		});
 
-		$('.form-control').on('input', function () {
-			floatedLabel($(this));
-		});
-
-		function floatedLabel(input) {
-			var $field = input.closest('.form-group');
-			if (input.val()) {
-				$field.addClass('input-not-empty');
-			} else {
-				$field.removeClass('input-not-empty');
-			}
-		}
-	</script>
 
 </body>
 
