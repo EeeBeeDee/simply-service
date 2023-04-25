@@ -2,7 +2,7 @@
 
 ## Agile Planning
 
-This project has been approached with an Agile mindset. Using epics and user stories I have laid out not only what I plan to achieve with this website but what I expect users hitting the home page will want. This approach has helped to compartmentalize development and make what I hope to achieve much more manageable. 
+This project has been approached with an Agile mindset. Using epics, tasks and user stories. I have laid out not only what I plan to achieve with this website but what I expect users hitting the home page will want. This approach has helped to compartmentalize development and make what I hope to achieve much more manageable. 
 
 This can be seen implemented on my projects [Kanban.](https://github.com/users/EeeBeeDee/projects/3/views/1)
 
