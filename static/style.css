@@ -22,6 +22,9 @@ html {
 nav {
     font-size: 1.6rem;
 }
+.nav-link:hover {
+    color: var(--tertiary-color);
+}
 
 nav i {
     font-size: 2rem;
