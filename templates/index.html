@@ -3,18 +3,21 @@
 
 {% block content %}
 
-<header class="hero-container zoom-me">
+<header class="hero-container">
     <img class="hero-img" src="{% static 'img/hero.jpg' %}" alt="View of one of our Restaurants">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cupiditate commodi obcaecati facilis quae fugit nobis vero quas, quod numquam minus, placeat temporibus enim officiis repudiandae eaque cumque dolorem iste!</p>
+    <p class="animate fadeInLeft delay-400">Simply | Service</p>
+    <h1 class="hero-title animate fadeInRight delay-600">Choose where you want to eat and when. All in one place</h1>
+    <a href="{% url 'bookings' %}" class="hero-button animate fadeInLeft delay-800">Book Now!</a>
+    <a href="#blurb"><i class="animate fadeInRight delay-1000 down-arrow fas fa-chevron-down"></i></a>
 </header>
 
-<section class="blurb" role="main">
+<section id="blurb" class="blurb" role="main">
 	<div class="contained blurb">
 		<h1>Zoom on Scroll Hero Image</h1>
 		<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
 	</div>
 </section>
 
-<div class="space-filler"></div>
+<div id="restaurants" class="space-filler"></div>
 
 {% endblock content %}
