@@ -1,14 +1,113 @@
-{% extends "base.html" %}
+{% load static %}
 
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container-fluid">
-    <div class="row">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-       <h1>bookings</h1>
-        </div>
-    </div>
+	<title>Booking Form HTML Template</title>
 
-</div>
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-{%endblock%}
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="{% static 'bookings/css/bootstrap.min.css' %}" />
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="{% static 'bookings/css/style.css' %}" />
+
+
+
+</head>
+
+<body>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<div class="form-header">
+							<h1>Make your reservation</h1>
+						</div>
+						<form>
+                            <div class="row">
+								<div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-control" type="time">
+                                        <span class="form-label">Time</span>
+                                    </div>
+                                </div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="date" required>
+										<span class="form-label">Date</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="number" min="1" max="9" class="form-control" required placeholder="no of adults">
+										<span class="select-arrow"></span>
+										<span class="form-label">Adults</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="number" min="1" max="9" class="form-control" required placeholder="no of children">
+										<span class="select-arrow"></span>
+										<span class="form-label">Children</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="email" placeholder="Enter your Email">
+										<span class="form-label">Email</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" type="tel" placeholder="Enter you Phone">
+										<span class="form-label">Phone</span>
+									</div>
+								</div>
+							</div>
+							<div class="form-btn">
+								<button class="submit-btn">Book Now</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="{% static 'bookings/js/jquery.min.js' %}"></script>
+	<script src="{% static 'bookings/js/app.js' %}"></script>
+	<script>
+		$('.form-control').each(function () {
+			floatedLabel($(this));
+		});
+
+		$('.form-control').on('input', function () {
+			floatedLabel($(this));
+		});
+
+		function floatedLabel(input) {
+			var $field = input.closest('.form-group');
+			if (input.val()) {
+				$field.addClass('input-not-empty');
+			} else {
+				$field.removeClass('input-not-empty');
+			}
+		}
+	</script>
+
+</body>
+
+</html>
