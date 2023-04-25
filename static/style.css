@@ -73,6 +73,51 @@ html {
     z-index: 10;
 }
 
+/* Hero Scroll */
+
+.contained {
+	margin: 0 auto;
+	width: 90%;
+	@media (min-width: 500px){
+		width: 80%;
+	}
+	@media (min-width: 600px){
+		width: 60%;
+	}
+}
+
+.blurb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	padding: 1em 0;
+	position: relative;
+	background: #f5f5f5;
+	box-shadow: 0px -10px 60px rgba(0,0,0,0.25);
+}
+
+header {
+	overflow: hidden;
+	padding-bottom: 55%;
+
+	@media (min-width: 600px){
+		padding-bottom: 50%;
+	}
+	@media (min-width: 700px){
+		padding-bottom: 45%;
+	}
+}
+
+header img {
+	width: 100%;
+	max-width: none;
+	position: fixed;
+	top: 0%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 
 /* Utilities */
 
