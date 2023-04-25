@@ -1,12 +1,20 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="space-filler"></div>
+<section class="hero-container">
+    <img class="hero-img" src="{% static 'img/hero.jpg' %}" alt="View of one of our Restaurants">
+    <div class="hero-blurb-container-bg">
     </div>
+    <div class="hero-blurb-container">
+        <h3>Hear Us Out!</h3>
+        <h2>Because we wanna hear you.</h2>
+        <p>Rehearsal rooms and recording suites all under one roof.</p>
+        <a class="btn btn-hero" href="#prices">Check our prices</a>
+    </div>
+</section>
 
-</div>
+<div class="space-filler"></div>
 
-{%endblock%}
+{% endblock content %}
