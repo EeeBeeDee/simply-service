@@ -109,6 +109,7 @@ nav i {
     padding: 20px 90px;
     text-decoration: none;
     z-index: 10;
+    transition: all 0.3s ease-in-out;
   }
 
   .hero-button:hover {
@@ -221,6 +222,11 @@ nav i {
     font-size: 10rem;
     color: var(--primary-color);
     z-index: 10;
+    transition: all 0.3s ease-in-out;
+  }
+
+  header a:hover .down-arrow {
+    color: var(--tertiary-color);
   }
 
 /* Hero Scroll */
