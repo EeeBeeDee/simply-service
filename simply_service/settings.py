@@ -133,6 +133,19 @@ USE_L10N = True
 
 USE_TZ = True
 
+# custom allauth singup forms
+ACCOUNT_FORMS = {
+    "add_email": "allauth.account.forms.AddEmailForm",
+    "change_password": "allauth.account.forms.ChangePasswordForm",
+    "disconnect": "allauth.socialaccount.forms.DisconnectForm",
+    "login": "allauth.account.forms.LoginForm",
+    "reset_password": "allauth.account.forms.ResetPasswordForm",
+    "reset_password_from_key": "allauth.account.forms.ResetPasswordKeyForm",
+    "set_password": "allauth.account.forms.SetPasswordForm",
+    "signup": "profiles.forms.SignupForm",
+    "user_token": "allauth.account.forms.UserTokenForm",
+}
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
