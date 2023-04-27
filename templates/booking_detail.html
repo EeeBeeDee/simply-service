@@ -2,11 +2,11 @@
 {% load static %} 
 
 {% block content %}
-    <div style="height: 200px;"></div>
+<div style="height: 200px;"></div>
 
     {% if user.is_authenticated %}
         {% for booking in bookings %}
-        <a href="{% url 'booking_detail' slug=booking.slug %}"><h1>{{booking.name}}</h1></a>
+        <h1>{{booking.name}} booking detail</h1>
         {% endfor %}
     {% else %}
     <h2>Please <a href="{% url 'account_login' %}">login</a> or <a href="{% url 'account_signup' %}">register</a> a new account to view your bookings.</h2>
