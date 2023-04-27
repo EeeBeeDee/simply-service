@@ -54,7 +54,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     "crispy_forms",
-    "crispy_bootstrap4",
     'homepage',
     'bookings',
 ]
