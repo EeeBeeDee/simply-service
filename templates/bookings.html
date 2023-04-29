@@ -39,11 +39,23 @@
 						<div class="form-header">
 							<h1>Make your reservation</h1>
 						</div>
-						<form>
+						<form method="POST" action="{% url 'bookings' %}" enctype="multipart/form-data">
+							{% csrf_token %}
                             <div class="row">
+								<div class="col-md-12">
+                                    <div class="form-group">
+                                        <select class="form-control" type="text">
+											<option value="tonys">Tonys</option>
+											<option value="zaytoons">zaytoons</option>
+											<option value="mercedes">Mercedes</option>
+											<option value="audi">Audi</option>
+										</select>
+                                        <span class="form-label">Restaurant</span>
+                                    </div>
+                                </div>
 								<div class="col-md-6">
                                     <div class="form-group">
-                                        <input class="form-control" type="time">
+                                        <input id="time" class="form-control" type="time">
                                         <span class="form-label">Time</span>
                                     </div>
                                 </div>
