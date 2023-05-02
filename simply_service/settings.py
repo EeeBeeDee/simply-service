@@ -106,6 +106,7 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+# AUTH_USER_MODEL = 'simply_service.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -148,7 +149,7 @@ ACCOUNT_FORMS = {
     "reset_password": "allauth.account.forms.ResetPasswordForm",
     "reset_password_from_key": "allauth.account.forms.ResetPasswordKeyForm",
     "set_password": "allauth.account.forms.SetPasswordForm",
-    "signup": "profiles.forms.SignupForm",
+    # "signup": "profiles.forms.SignupForm",
     "user_token": "allauth.account.forms.UserTokenForm",
 }
 

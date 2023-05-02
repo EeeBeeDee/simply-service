@@ -1,19 +1,21 @@
 from django import forms
 from .models import Bookings
-from django.forms import  TextInput, DateInput, NumberInput, TimeInput, EmailInput
+from django.forms import  TextInput, DateInput, NumberInput, TimeInput, EmailInput, Select
 
 class BookingsForm(forms.ModelForm):
     class Meta:
         model = Bookings
         fields = ['restaurant', 'time', 'date', 'no_of_adults', 'no_of_children', 'name', 'email', 'number']
         widgets = {
-            'restaurant': TextInput(attrs={
+            'restaurant': Select(attrs={
                 'class': 'form-control',
             }),
             'time': TimeInput(attrs={
+                'type': 'time',
                 'class': 'form-control',
             }),
             'date': DateInput(attrs={
+                'type': 'date',
                 'class': 'form-control',
             }),
             'no_of_adults': NumberInput(attrs={
@@ -30,8 +32,10 @@ class BookingsForm(forms.ModelForm):
             }),
             'email': EmailInput(attrs={
                 'class': 'form-control',
+                'placeholder': 'Enter your Email',
             }),
             'number': NumberInput(attrs={
                 'class': 'form-control',
+                'placeholder': 'Enter your Phone Number',
             }),
         }

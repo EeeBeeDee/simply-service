@@ -39,29 +39,24 @@
 						<div class="form-header">
 							<h1>Make your reservation</h1>
 						</div>
-						<form method="POST" action="{% url 'bookings' %}" enctype="multipart/form-data">
+						<form method="post" action="{% url 'bookings' %}" enctype="multipart/form-data">
 							{% csrf_token %}
                             <div class="row">
 								<div class="col-md-12">
                                     <div class="form-group">
-                                        <select class="form-control" type="text">
-											<option value="tonys">Tonys</option>
-											<option value="zaytoons">zaytoons</option>
-											<option value="mercedes">Mercedes</option>
-											<option value="audi">Audi</option>
-										</select>
+                                        {{ form.restaurant }}
                                         <span class="form-label">Restaurant</span>
                                     </div>
                                 </div>
 								<div class="col-md-6">
                                     <div class="form-group">
-                                        <input id="time" class="form-control" type="time">
+                                        {{ form.time }}
                                         <span class="form-label">Time</span>
                                     </div>
                                 </div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input id="date" class="form-control" type="date" required>
+										{{ form.date }}
 										<span class="form-label">Date</span>
 									</div>
 								</div>
@@ -69,14 +64,14 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="number" min="1" max="9" class="form-control" required placeholder="no of adults">
+										{{ form.no_of_adults }}
 										<span class="select-arrow"></span>
 										<span class="form-label">Adults</span>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="number" min="1" max="9" class="form-control" required placeholder="no of children">
+										{{ form.no_of_children }}
 										<span class="select-arrow"></span>
 										<span class="form-label">Children</span>
 									</div>
@@ -85,20 +80,20 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="email" placeholder="Enter your Email">
+										{{ form.email }}
 										<span class="form-label">Email</span>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input required class="form-control" type="tel" placeholder="Enter you Phone">
+										{{ form.number }}
 										<span class="form-label">Phone</span>
 									</div>
 								</div>
 							</div>
-							<div class="form-btn">
-								<button class="submit-btn">Book Now</button>
-							</div>
+							
+							<button type="submit" class="submit-btn">Book Now</button>
+							
 						</form>
 					</form>
 				</div>

@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.views import generic, View
 from .models import Bookings
@@ -9,16 +9,19 @@ from .forms import BookingsForm
 
 def bookings(request):
     """
-    Bookings view
+    Make a reservation page
     """
     if request.method == "POST":
         form = BookingsForm(request.POST)
         if form.is_valid():
-            pass
-
-    
-    form = BookingsForm()    
-    return render(request, 'bookings.html', {'form': form })
+            instance = form.save(commit=False)
+            instance.name = request.user
+            instance.slug = f'{instance.name}-{instance.date}'
+            instance.save()
+            return redirect('/')
+    else:
+        form = BookingsForm()
+    return render(request, 'bookings.html', {'form': form})
 
 
 def your_bookings(request):
