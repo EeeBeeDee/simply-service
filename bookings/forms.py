@@ -9,6 +9,7 @@ class BookingsForm(forms.ModelForm):
         widgets = {
             'restaurant': Select(attrs={
                 'class': 'form-control',
+                'value': '1',
             }),
             'time': TimeInput(attrs={
                 'type': 'time',

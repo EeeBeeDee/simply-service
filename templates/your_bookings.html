@@ -4,13 +4,11 @@
 {% block content %}
     <div style="height: 200px;"></div>
 
-    {% if user.is_authenticated %}
         {% for booking in bookings %}
-        <a href="{% url 'booking_detail' slug=booking.slug %}"><h1>{{booking.name}}</h1></a>
+        <a href="{% url 'booking_detail' slug=booking.slug %}"><h1> {{ booking.restaurant }} - {{ booking.date }}</h1></a>
         {% endfor %}
-    {% else %}
-    <h2>Please <a href="{% url 'account_login' %}">login</a> or <a href="{% url 'account_signup' %}">register</a> a new account to view your bookings.</h2>
-    {% endif %}
+    </div>
+   
 
 
 {% endblock content %}

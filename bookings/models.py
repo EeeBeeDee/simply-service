@@ -8,10 +8,10 @@ from django import forms
 
 class Bookings(models.Model):
     RESTAURANTS = [
-        ('TS', 'Tonys'),
-        ('ZT', 'Zaytoons'),
-        ('MR', 'Mercedes'),
-        ('AU', 'Audi'),
+        ('Tonys', 'Tonys'),
+        ('Zaytoons', 'Zaytoons'),
+        ('Mercedes', 'Mercedes'),
+        ('Audi', 'Audi'),
     ]
     restaurant = models.CharField(max_length=100, choices=RESTAURANTS)
     time = models.TimeField()

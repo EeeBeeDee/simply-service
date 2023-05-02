@@ -33,13 +33,13 @@ def bookings(request):
     return render(request, 'bookings.html', {'form': form})
 
 
-class YourBookings(LoginRequiredMixin,View):
+class YourBookings(LoginRequiredMixin, View):
     
     def get(self, request):
-        queryset = Bookings.objects.filter(name=request.user)
-        bookings = get_object_or_404(queryset)
-        
-        return render(request, 'your_bookings.html', {bookings: bookings})
+        bookings = Bookings.objects.filter(name=request.user)
+        # bookings = get_object_or_404(queryset)
+        # print(bookings)
+        return render(request, 'your_bookings.html', {'bookings': bookings})
 
     # bookings = Bookings.objects.filter()
     # return render(request, 'your_bookings.html', {'bookings': bookings})
