@@ -5,7 +5,7 @@ from django.forms import  TextInput, DateInput, NumberInput, TimeInput, EmailInp
 class BookingsForm(forms.ModelForm):
     class Meta:
         model = Bookings
-        fields = ['restaurant', 'time', 'date', 'no_of_adults', 'no_of_children', 'name', 'email', 'number']
+        fields = ['restaurant', 'time', 'date', 'no_of_adults', 'no_of_children', 'email', 'number']
         widgets = {
             'restaurant': Select(attrs={
                 'class': 'form-control',
