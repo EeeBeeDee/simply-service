@@ -6,11 +6,16 @@
     <div class="bookings-img-container">
         <img class="bookings-img" src="{% static 'bookings/img/hero.jpg' %}" alt="View of one of our Restaurants">
     </div>
+    <h2 class="bookings-title navbar-brand mask-custom">Your Reservations</h2>
     <div class="container">
-        <div class="bookings-list">
-            {% for booking in bookings %}
-            <a href="{% url 'booking_detail' slug=booking.slug %}"><h1> {{ booking.restaurant }} - {{ booking.date }}</h1></a>
-        {% endfor %}
+        <div class="bookings mask-custom">
+            <ul class="bookings-list list-group list-group-flush">
+                {% for booking in bookings %}
+                <li class="booking list-group-item">
+                    <a href="{% url 'booking_detail' slug=booking.slug %}"><h1> {{ booking.restaurant }} - {{ booking.date }}</h1></a>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
    

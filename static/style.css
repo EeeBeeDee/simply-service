@@ -261,7 +261,9 @@ header img {
 /* Your bookings view */
 
 .bookings-view {
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -269,6 +271,7 @@ header img {
 .bookings-img-container {
   height: 100vh;
   width: 100vw;
+  position: fixed;
 }
 
 .bookings-img {
@@ -291,6 +294,49 @@ header img {
   opacity: 0.8;
   z-index: 5;
 }
+
+.bookings-title {
+  z-index: 10;
+  margin-bottom: 5rem;
+  padding: 0 2rem;
+  font-size: 5rem;
+  color: #000;
+  border-radius: 2rem;
+}
+
+.bookings {
+  min-width: 70vw;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  border-radius: 3rem;
+}
+
+.bookings-list {
+  margin-left: 2rem;
+  background-color: none;
+  
+}
+
+.booking {
+  background-color: transparent;
+  border: none;
+  margin: 1rem;
+}
+
+.booking a {
+  color: var(--tertiary-color);
+  transition: 0.2s ease-in;
+}
+
+.booking a:hover {
+  color: var(--primary-color);
+}
+
+.booking a:active h1 {
+  transform: scale(0.98);
+}
+
 
 
 /* Footer */
