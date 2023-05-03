@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
+from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -49,5 +50,10 @@ class YourBookings(LoginRequiredMixin, View):
 def booking_detail(request, slug):
     bookings = Bookings.objects.filter()
     booking = get_object_or_404(bookings, slug=slug)
+
+    if request.method == "POST":
+        booking = get_object_or_404(Bookings, slug=slug)
+        booking.delete()
+        return HttpResponseRedirect(reverse('your_bookings'))
 
     return render(request, 'booking_detail.html', {'booking': booking})
