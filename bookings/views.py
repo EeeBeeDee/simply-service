@@ -22,11 +22,11 @@ def bookings(request):
         if form.is_valid():
             instance = form.save(commit=False)
             instance.name = user
-            instance.slug = f'{instance.name}-{instance.date}'
+            instance.slug = f'{instance.name}-{instance.date}-{instance.no_of_children}'
             instance.save()
             messages.success(
                     request, f'Your reservation at {instance.restaurant} has been confirmed.')
-            return redirect('homepage')
+            return redirect('your_bookings')
         else:
              print(form.errors.as_data())
     else:

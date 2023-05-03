@@ -386,12 +386,13 @@ header img {
   padding: 1rem 3rem;
   display: flex;
   justify-content: space-between;
-  align-items: ;
 }
 
+
 .booking-btn {
+  background-color: var(--primary-color);
   margin: 0 2rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
   font-size: 2.5rem;
   transition: all 0.2s ease-in;
 }
@@ -412,10 +413,16 @@ header img {
 /* Footer */
 
 .footer {
+  display: flex;
+  justify-content: space-around;
   width: 100%;
   font-size: 2rem;
-    background-color: var(--secondary-color);
-    z-index: 20;
+  background-color: var(--secondary-color);
+  z-index: 20;
+}
+
+.footer-el {
+  color: var(--primary-color);
 }
 
 .footer p,

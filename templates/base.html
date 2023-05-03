@@ -2,108 +2,132 @@
 
 <!DOCTYPE html>
 <html class="h-100">
+    <head>
+        <title>Simply | Service</title>
 
-<head>
-    <title>Simply | Service</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <!-- Font Awesome -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- MDB -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+            rel="stylesheet"
+        />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-   <!-- Font Awesome -->
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
-    rel="stylesheet"
-    />
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
+    </head>
 
-</head>
+    <body class="d-flex flex-column h-100 main-bg">
+        <!-- Navigation -->
+        <nav
+            class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0"
+        >
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'homepage' %}"
+                    >Simply | Service</a
+                >
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbar"
+                    aria-controls="navbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!">Restaurants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'bookings' %}"
+                                >Book Now!</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!">Contact Us</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'your_bookings' %}"
+                                >Your Reservations</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="{% url 'account_logout' %}"
+                                >Logout</a
+                            >
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="{% url 'account_signup' %}"
+                                >Register</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_login' %}"
+                                >Login</a
+                            >
+                        </li>
+                        {% endif %}
+                    </ul>
+                    <ul class="navbar-nav d-flex flex-row">
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link" href="#!">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item me-3 me-lg-0">
+                            <a class="nav-link" href="#!">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-<body class="d-flex flex-column h-100 main-bg">
+        <main class="flex-shrink-0 main-bg">
+            {% block content %} {% endblock content %}
+        </main>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
-        <div class="container">
-          <a class="navbar-brand" href="{% url 'homepage' %}">Simply | Service</a>
-          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-            data-mdb-target="#navbar" aria-controls="navbar" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#!">Restaurants</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'bookings' %}">Book Now!</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#!">Contact Us</a>
-              </li>
-              {% if user.is_authenticated %}
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'your_bookings' %}">Your Reservations</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-              </li>
-              {% else %}
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-              </li>
-              {% endif %}
-            </ul>
-            <ul class="navbar-nav d-flex flex-row">
-              <li class="nav-item me-3 me-lg-0">
-                <a class="nav-link" href="#!">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="nav-item me-3 me-lg-0">
-                <a class="nav-link" href="#!">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+        <!-- Footer -->
+        <footer class="footer mt-auto py-5 dark-bg">
+            <div class="footer-el">
+                <span>&copy; Simply | Service 2023</span>
+            </div>
+            <div class="footer-el">
+                <p class="m-0 text-center">Made by Eoghan Behan</p>
+                <p class="m-0 text-center text-white">
+                    Follow us:
+                    <i class="fab fa-twitter-square ms-3"></i>
+                    <i class="fab fa-instagram-square ms-3"></i>
+                </p>
+            </div>
+        </footer>
 
-
-
-    <main class="flex-shrink-0 main-bg">
-        {% block content %}
-        {% endblock content %}
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer mt-auto py-5 dark-bg">
-        <p class="m-0 text-center ">Made by Eoghan Behan</p>
-        <p class="m-0 text-center text-white">Follow us: 
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-    </footer>
-
-    <!-- MDB -->
-    <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
-    ></script>
-    <!-- <script src="{% static 'bookings/js/jquery.min.js' %}"></script> -->
-    <script src="{%static 'app.js' %}"></script>
-</body>
-
+        <!-- MDB -->
+        <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
+        ></script>
+        <!-- <script src="{% static 'bookings/js/jquery.min.js' %}"></script> -->
+        <script src="{%static 'app.js' %}"></script>
+    </body>
 </html>
