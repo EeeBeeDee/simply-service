@@ -45,7 +45,7 @@ class YourBookings(LoginRequiredMixin, View):
     # return render(request, 'your_bookings.html', {'bookings': bookings})
 
 
-
+@login_required()
 def booking_detail(request, slug):
     bookings = Bookings.objects.filter()
     booking = get_object_or_404(bookings, slug=slug)

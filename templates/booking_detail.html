@@ -2,15 +2,30 @@
 {% load static %} 
 
 {% block content %}
-<div style="height: 200px;"></div>
-
-    {% if user.is_authenticated %}
-        {% for booking in bookings %}
-        <h1>{{booking.name}} booking detail</h1>
-        {% endfor %}
-    {% else %}
-    <h2>Please <a href="{% url 'account_login' %}">login</a> or <a href="{% url 'account_signup' %}">register</a> a new account to view your bookings.</h2>
-    {% endif %}
+<a href="{% url 'your_bookings' %}"><i class="fas fa-chevron-left return"></i></a>
+<section class="bookings-view">
+    <div class="bookings-img-container">
+        <img class="bookings-img" src="{% static 'bookings/img/hero.jpg' %}" alt="View of one of our Restaurants">
+    </div>
+    <div class="container">
+        <div class="booking-detail mask-custom">
+                <h2 class="detail-title">{{ booking.restaurant }} - - {{ booking.date }}</h2>
+                <div class="detail-flex">
+                    <h3>Booking name:</h3>
+                    <h3>{{ booking.name }}</h3>
+                </div>
+                <div class="detail-flex">
+                    <h3>Time:</h3>
+                    <h3>{{ booking.time }}</h3>
+                </div>
+                <div class="detail-flex">
+                    <h3>No of Adults / Children:</h3>
+                    <h3>{{ booking.no_of_adults }} / {{ booking.no_of_adults }}</h3>
+                </div>
+        </div>
+    </div>
+   
+</section>
 
 
 {% endblock content %}
