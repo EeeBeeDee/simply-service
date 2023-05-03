@@ -2,13 +2,18 @@
 {% load static %} 
 
 {% block content %}
-    <div style="height: 200px;"></div>
-
-        {% for booking in bookings %}
-        <a href="{% url 'booking_detail' slug=booking.slug %}"><h1> {{ booking.restaurant }} - {{ booking.date }}</h1></a>
+<section class="bookings-view">
+    <div class="bookings-img-container">
+        <img class="bookings-img" src="{% static 'bookings/img/hero.jpg' %}" alt="View of one of our Restaurants">
+    </div>
+    <div class="container">
+        <div class="bookings-list">
+            {% for booking in bookings %}
+            <a href="{% url 'booking_detail' slug=booking.slug %}"><h1> {{ booking.restaurant }} - {{ booking.date }}</h1></a>
         {% endfor %}
+        </div>
     </div>
    
-
+</section>
 
 {% endblock content %}
