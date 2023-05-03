@@ -266,6 +266,7 @@ header img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .bookings-img-container {
@@ -296,7 +297,9 @@ header img {
 }
 
 .bookings-title {
+  text-align: center;
   z-index: 10;
+  margin: 0 auto;
   margin-bottom: 5rem;
   padding: 0 2rem;
   font-size: 5rem;
@@ -348,12 +351,13 @@ header img {
   transform: scale(0.98);
 }
 
+
 /* Single Booking */
 
 .return {
-	position: fixed;
+  position: fixed;
 	top: 7rem;
-	left: 1rem;
+	left: 2rem;
 	color: var(--tertiary-color);
 	font-size: 3rem;
 	z-index: 100;
@@ -385,11 +389,31 @@ header img {
   align-items: ;
 }
 
+.booking-btn {
+  margin: 0 2rem;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  transition: all 0.2s ease-in;
+}
+
+.booking-btn:active {
+  transform: scale(0.98);
+}
+
+
+.cancel-btn {
+  background-color: var(--tertiary-color);
+}
+
+.cancel-btn:hover {
+  background-color: red;
+}
+
 /* Footer */
 
 .footer {
-    width: 100%;
-    font-size: 2rem;
+  width: 100%;
+  font-size: 2rem;
     background-color: var(--secondary-color);
     z-index: 20;
 }
