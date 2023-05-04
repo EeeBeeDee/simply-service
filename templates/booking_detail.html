@@ -3,10 +3,10 @@
 
 {% block content %}
 <a href="{% url 'your_bookings' %}"><i class="fas fa-chevron-left return"></i></a>
+<div class="bookings-img-container">
+    <img class="bookings-img" src="{% static 'bookings/img/hero.jpg' %}" alt="View of one of our Restaurants">
+</div>
 <section class="bookings-view">
-    <div class="bookings-img-container">
-        <img class="bookings-img" src="{% static 'bookings/img/hero.jpg' %}" alt="View of one of our Restaurants">
-    </div>
     <div class="container">
         <div class="booking-detail mask-custom">
                 <h2 class="detail-title">{{ booking.restaurant }} - - {{ booking.date }}</h2>
@@ -22,7 +22,7 @@
                     <h3>No of Adults / Children:</h3>
                     <h3>{{ booking.no_of_adults }} / {{ booking.no_of_adults }}</h3>
                 </div>
-                <div class="detail-flex">
+                <div class="detail-flex mt-5">
                     <a href=""class="btn booking-btn">Update</a>
                     <form action="{% url 'booking_detail' slug=booking.slug %}" method="post" >
                         {% csrf_token %}

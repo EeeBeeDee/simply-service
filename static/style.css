@@ -243,8 +243,14 @@ nav i {
   align-items: center;
 	padding: 1em 0;
 	position: relative;
-	background: #f5f5f5;
 	box-shadow: 0px -10px 60px rgba(0,0,0,0.25);
+}
+
+.blurb-section {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 2rem;
+  color: var(--primary-color);
 }
 
 header img {
@@ -257,16 +263,96 @@ header img {
 	transform: translateX(-50%);
 }
 
+/* Restaurants */
 
-/* Your bookings view */
-
-.bookings-view {
-  height: 100vh;
+.restaurants {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+}
+
+.restaurants-heading {
+  text-align: center;
+
+}
+
+.restaurant-card {
+  display: flex;
+  color: #000 ;
+  width: 100%;
+  height: 30rem;
+  box-shadow:  0 .5rem 3rem 1rem rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ;
+}
+
+.restaurant-card-reverse {
+  flex-direction: row-reverse;
+}
+
+.restaurant-card:hover {
+  /* transform: scale(1.02); */
+  box-shadow:  0 .5rem 2rem 1rem rgba(0, 0, 0, 0.6);
+}
+
+.restaurant-img-container {
+  height: 100%;
+  width: 33%;
+  overflow: hidden;
+  
+}
+
+.restaurant-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.restaurant-blurb {
+  width: 66%;
+}
+.restaurant-blurb h2 {
+  font-size: 2.5rem;
+}
+.restaurant-blurb p {
+  font-size: 1.6rem;
+}
+
+.restaurant-booking-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+.restaurant-icon {
+  background-color: var(--tertiary-color);
+  color: #000;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  border-radius: 3rem;
+}
+
+.restaurant-booking-flex > * {
+  margin: 1rem 3rem;
+}
+
+
+/* Your bookings view */
+
+.bookings-view {
+  margin: 5rem 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .bookings-img-container {
@@ -296,7 +382,7 @@ header img {
   z-index: 5;
 }
 
-.bookings-title {
+.title {
   text-align: center;
   z-index: 10;
   margin: 0 auto;
@@ -304,6 +390,7 @@ header img {
   padding: 0 2rem;
   font-size: 5rem;
   color: #000;
+  letter-spacing: 1rem;
   border-radius: 2rem;
   max-width: 85vw;
 }
@@ -319,7 +406,7 @@ header img {
   min-width: 70vw;
   min-height: 60vh;
   max-width: 85vw;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   border-radius: 3rem;
@@ -391,8 +478,6 @@ header img {
 
 .booking-btn {
   background-color: var(--primary-color);
-  margin: 0 2rem;
-  margin-top: 4rem;
   font-size: 2.5rem;
   transition: all 0.2s ease-in;
 }

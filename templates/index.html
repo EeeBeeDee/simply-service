@@ -1,23 +1,135 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 
 <header class="hero-container">
-    <img class="hero-img" src="{% static 'bookings/img/hero.jpg' %}" alt="View of one of our Restaurants">
+    <img
+        class="hero-img"
+        src="{% static 'bookings/img/hero.jpg' %}"
+        alt="View of one of our Restaurants"
+    />
     <p class="animate fadeInLeft delay-400">Simply | Service</p>
-    <h1 class="hero-title animate fadeInRight delay-600">Choose where you want to eat and when. All in one place</h1>
-    <a href="{% url 'bookings' %}" class="hero-button animate fadeInLeft delay-800">Book Now!</a>
-    <a href="#blurb"><i class="animate fadeInRight delay-1000 down-arrow fas fa-chevron-down"></i></a>
+    <h1 class="hero-title animate fadeInRight delay-600">
+        Choose where you want to eat and when. All in one place
+    </h1>
+    <a
+        href="{% url 'bookings' %}"
+        class="hero-button animate fadeInLeft delay-800"
+        >Book Now!</a
+    >
+    <a href="#blurb"
+        ><i
+            class="animate fadeInRight delay-1000 down-arrow fas fa-chevron-down"
+        ></i
+    ></a>
 </header>
 
-<section id="blurb" class="blurb" role="main">
-	<div class="contained blurb">
-		<h1>Zoom on Scroll Hero Image</h1>
-		<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-	</div>
+<section id="blurb" class="blurb mask-custom" role="main">
+    <div class="contained blurb-section">
+        <h1 class="text-center mb-4">
+            Find a menu you like <br />
+            and book while you are here with us
+        </h1>
+        <p class="text-light h5 text-center">
+            Here at simply service our aim is to stop the hassle searching for a
+            restaurant in one place, a menu in another and then using an
+            unfamiliar system to book in your reservation or, god forbid have to
+            ring to book in. Here at simply service we want to streamline not
+            only the customers experience but the businesses end too.
+        </p>
+    </div>
 </section>
 
-<div id="restaurants" class="space-filler"></div>
+<section class="restaurants pt-5" id="restaurants">
+    <div class="container">
+        <h2 class="title mask-custom mb-5">Restaurants</h2>
+        <div class="restaurant-card mb-5 mask-custom">
+            <div class="restaurant-img-container">
+                <img
+                    src="assests/media/recording-restaurant.jpg"
+                    alt=""
+                    class="restaurant-img"
+                />
+            </div>
+            <div class="restaurant-blurb px-2">
+                <h2 class="my-2">
+                    Tonys
+                </h2>
+                <p>
+                    Italian restaurant with a great sea view
+                    <br />
+                    <br />
+                    - Lorem ipsum dolor sit amet.
+                    <br />
+                    - Lorem ipsum dolor sit amet.
+                    <br />
+                    - Lorem ipsum dolor sit amet.
+                </p>
+                <div class="restaurant-booking-flex">
+                    <div class="restaurant-icon">€28</div>
+                    <a href="{% url 'bookings' %}" class="btn booking-btn">Book Now!</a>
+                </div>
+                <h3 class="mx-1">Average spend</h3>
+            </div>
+        </div>
+        <div class="restaurant-card restaurant-card-reverse mb-5 mask-custom">
+            <div class="restaurant-img-container">
+                <img
+                    src="assests/media/rehearsal-restaurant.jpg"
+                    alt=""
+                    class="restaurant-img"
+                />
+            </div>
+            <div class="restaurant-blurb px-3">
+                <h2 class="my-3">
+                    EFGH
+                </h2>
+                <p>
+                    Blah blah blah  
+                    <br />
+                    <br />
+                    - Lorem ipsum dolor sit amet.
+                    <br />
+                    - Lorem ipsum dolor sit amet.
+                    <br />
+                    - Lorem ipsum dolor sit amet.
+                   
+                </p>
+                <div class="restaurant-booking-flex">
+                    <div class="restaurant-icon">€55</div>
+                    <a href="{% url 'bookings' %}" class="btn booking-btn">Book Now!</a>
+                </div>
+                <h3 class="mx-3">Average spend</h3>
+            </div>
+        </div>
+        <div class="restaurant-card mb-5 mask-custom">
+            <div class="restaurant-img-container">
+                <img
+                    src="assests/media/recording-restaurant.jpg"
+                    alt=""
+                    class="restaurant-img"
+                />
+            </div>
+            <div class="restaurant-blurb px-2">
+                <h2 class="my-2">
+                    ABCD
+                </h2>
+                <p>
+                    Italian restaurant with a great sea view
+                    <br />
+                    <br />
+                    - Lorem ipsum dolor sit amet.
+                    <br />
+                    - Lorem ipsum dolor sit amet.
+                    <br />
+                    - Lorem ipsum dolor sit amet.
+                </p>
+                <div class="restaurant-booking-flex">
+                    <div class="restaurant-icon">€35</div>
+                    <a href="{% url 'bookings' %}" class="btn booking-btn">Book Now!</a>
+                </div>
+                <h3 class="mx-3">Average spend</h3>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock content %}
