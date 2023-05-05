@@ -57,3 +57,20 @@ def booking_detail(request, slug):
         return HttpResponseRedirect(reverse('your_bookings'))
 
     return render(request, 'booking_detail.html', {'booking': booking})
+
+@login_required()
+def booking_update(request, slug):
+    bookings = Bookings.objects.filter()
+    booking = get_object_or_404(bookings, slug=slug)
+    form = BookingsForm(request.POST or None, instance=booking)
+    if form.is_valid():
+        print('hi')
+        instance = form.save(commit=False)
+        instance.slug = f'{instance.name}-{instance.date}-{instance.no_of_children}'
+        instance.save()
+        booking.delete()
+        return redirect('your_bookings')
+
+    return render(request, 'booking_update.html',
+        {'booking': booking,
+        "form": form})

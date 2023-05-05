@@ -1,0 +1,112 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Simply Service | Bookings</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+
+	<!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="{% static 'bookings/css/bootstrap.min.css' %}" />
+
+	<link type="text/css" rel="stylesheet" href="{% static 'style.css' %}" />
+	<link type="text/css" rel="stylesheet" href="{% static 'bookings/css/bookings-style.css' %}" />
+
+
+
+</head>
+
+<body>
+	<a href="{% url 'homepage' %}"><i class="fas fa-chevron-left return"></i></a>
+
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<form method="post" action="{% url 'bookings' %}" enctype="multipart/form-data" class="booking-form">
+						<div class="form-header">
+							<h1>Make your reservation</h1>
+						</div>
+							{% csrf_token %}
+                            <div class="row">
+								<div class="col-md-12">
+                                    <div class="form-group">
+                                        {{ form.restaurant }}
+                                        <span class="form-label">Restaurant</span>
+                                    </div>
+                                </div>
+								<div class="col-md-6">
+                                    <div class="form-group">
+                                        {{ form.time }}
+                                        <span class="form-label">Time</span>
+                                    </div>
+                                </div>
+								<div class="col-md-6">
+									<div class="form-group">
+										{{ form.date }}
+										<span class="form-label">Date</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										{{ form.no_of_adults }}
+										<span class="select-arrow"></span>
+										<span class="form-label">Adults</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										{{ form.no_of_children }}
+										<span class="select-arrow"></span>
+										<span class="form-label">Children</span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										{{ form.email }}
+										<span class="form-label">Email</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										{{ form.number }}
+										<span class="form-label">Phone</span>
+									</div>
+								</div>
+							</div>
+							<input type="submit" class="submit-btn" value="Book Now">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MDB -->
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
+    ></script>
+
+	<script src="{% static 'bookings/js/jquery.min.js' %}"></script>
+	<script src="{% static 'bookings/js/app.js' %}"></script>
+
+
+</body>
+
+</html>
