@@ -1,6 +1,7 @@
 from django import forms
 from .models import Bookings
 from django.forms import  TextInput, DateInput, NumberInput, TimeInput, EmailInput, Select
+from datetime import date
 
 class BookingsForm(forms.ModelForm):
     class Meta:
@@ -17,7 +18,9 @@ class BookingsForm(forms.ModelForm):
             }),
             'date': DateInput(attrs={
                 'type': 'date',
+                'min': date.today().strftime('%Y-%m-%d'),
                 'class': 'form-control',
+
             }),
             'no_of_adults': NumberInput(attrs={
                 'class': 'form-control',
@@ -27,7 +30,7 @@ class BookingsForm(forms.ModelForm):
             }),
             'no_of_children': NumberInput(attrs={
                 'class': 'form-control',
-                'min': '1',
+                'min': '0',
                 'max': '9',
                 'placeholder': 'no of children',
             }),

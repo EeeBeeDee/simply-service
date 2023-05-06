@@ -49,7 +49,7 @@ nav i {
 
 .mask-custom {
   backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, .4);
+  background-color: rgba(255, 255, 255, .6);
 }
 
 .navbar-brand {
@@ -493,6 +493,18 @@ header img {
 
 .cancel-btn:hover {
   background-color: red;
+}
+
+/* Account pages */
+
+.gradient-bg {
+  background: linear-gradient(to bottom right, #469995, #101419);
+}
+
+.body-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Footer */

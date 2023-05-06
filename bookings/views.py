@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views import generic, View
+from django.views import View
 from django.contrib import messages
 from .models import Bookings
 from .forms import BookingsForm
@@ -22,13 +22,13 @@ def bookings(request):
         if form.is_valid():
             instance = form.save(commit=False)
             instance.name = user
-            instance.slug = f'{instance.name}-{instance.date}-{instance.no_of_children}'
+            current_time = str(instance.time)
+            current_time = current_time.replace(":", "")
+            instance.slug = f'{instance.name}-{current_time}-{instance.date}'
             instance.save()
-            messages.success(
-                    request, f'Your reservation at {instance.restaurant} has been confirmed.')
             return redirect('your_bookings')
         else:
-             print(form.errors.as_data())
+            print(form.errors.as_data())
     else:
         form = BookingsForm()
     return render(request, 'bookings.html', {'form': form})
@@ -59,18 +59,20 @@ def booking_detail(request, slug):
     return render(request, 'booking_detail.html', {'booking': booking})
 
 @login_required()
-def booking_update(request, slug):
-    bookings = Bookings.objects.filter()
-    booking = get_object_or_404(bookings, slug=slug)
+def booking_update(request, id):
+    booking = get_object_or_404(Bookings, id=id)
     form = BookingsForm(request.POST or None, instance=booking)
-    if form.is_valid():
-        print('hi')
-        instance = form.save(commit=False)
-        instance.slug = f'{instance.name}-{instance.date}-{instance.no_of_children}'
-        instance.save()
-        booking.delete()
-        return redirect('your_bookings')
+    if request.method == "POST":
+        if form.is_valid():
+            # instance = form.save(commit=False)
+            current_time = str(form.instance.time)
+            current_time = current_time.replace(":", "")
+            form.instance.slug = f'{form.instance.name}-{current_time}-{form.instance.date}'
+            form.save()
+            return redirect('your_bookings')
 
     return render(request, 'booking_update.html',
         {'booking': booking,
         "form": form})
+
+# initial={'email': request.user.email}
