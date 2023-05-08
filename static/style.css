@@ -33,34 +33,34 @@ nav i {
 .navbar-scroll .nav-link,
 .navbar-scroll .navbar-toggler-icon,
 .navbar-scroll .navbar-brand {
-  color: #fff;
+    color: #fff;
 }
 
 .navbar-scrolled .nav-link,
 .navbar-scrolled .navbar-toggler-icon,
 .navbar-scrolled .navbar-brand {
-  color: #fff;
+    color: #fff;
 }
 
 .navbar-scroll,
 .navbar-scrolled {
-  background-color: #cbbcb1;
+    background-color: #cbbcb1;
 }
 
 .mask-custom {
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, .6);
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .navbar-brand {
-  font-size: 1.75rem;
-  letter-spacing: 3px;
+    font-size: 1.75rem;
+    letter-spacing: 3px;
 }
 
 /* Hero */
 
 main {
-  width: 100%;
+    width: 100%;
 }
 
 .hero-container {
@@ -74,13 +74,13 @@ main {
 }
 
 .hero-img {
-  width: 100%;
+    width: 100%;
     display: inline-block;
     object-fit: cover;
 }
 
 .hero-container::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 0;
@@ -91,8 +91,8 @@ main {
     opacity: 0.8;
     z-index: 5;
 }
-  
-  .hero-container p {
+
+.hero-container p {
     color: white;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 1.3rem;
@@ -102,9 +102,9 @@ main {
     text-transform: uppercase;
     text-align: left;
     z-index: 10;
-  }
-  
-  .hero-button {
+}
+
+.hero-button {
     background: var(--secondary-color);
     color: #44575b;
     font-size: 2.4rem;
@@ -115,13 +115,13 @@ main {
     text-decoration: none;
     z-index: 10;
     transition: all 0.3s ease-in-out;
-  }
+}
 
-  .hero-button:hover {
+.hero-button:hover {
     color: var(--tertiary-color);
-  }
-  
-  .hero-title {
+}
+
+.hero-title {
     color: white;
     font-family: "Playfair Display", serif;
     font-size: 5rem;
@@ -132,413 +132,399 @@ main {
     margin: 5px 0;
     width: 85%;
     z-index: 10;
-  }
-  
-  @-webkit-keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      transform: translate3d(-12px, 0, 0);
-    }
-    to {
-      opacity: 1;
-      transform: none;
-    }
-  }
-  
-  @keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      transform: translate3d(-12px, 0, 0);
-    }
-    to {
-      opacity: 1;
-      transform: none;
-    }
-  }
+}
 
-  @-webkit-keyframes fadeInRight {
+@-webkit-keyframes fadeInLeft {
     from {
-      opacity: 0;
-      transform: translate3d(12px, 0, 0);
+        opacity: 0;
+        transform: translate3d(-12px, 0, 0);
     }
     to {
-      opacity: 1;
-      transform: none;
+        opacity: 1;
+        transform: none;
     }
-  }
-  
-  @keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translate3d(12px, 0, 0);
-    }
-    to {
-      opacity: 1;
-      transform: none;
-    }
-  }
+}
 
-  .fadeInLeft {
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-12px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@-webkit-keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(12px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(12px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInLeft {
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
-  }
+}
 
-  .fadeInRight {
+.fadeInRight {
     -webkit-animation-name: fadeInRight;
     animation-name: fadeInRight;
-  }
-  
-  .animate {
+}
+
+.animate {
     -webkit-animation-duration: 0.75s;
-            animation-duration: 0.75s;
+    animation-duration: 0.75s;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-fill-mode: both;
     -webkit-animation-timing-function: cubic-bezier(0.2, 0.3, 0.25, 0.9);
-            animation-timing-function: cubic-bezier(0.2, 0.3, 0.25, 0.9);
-  }
-  
-  
-  .delay-400 {
+    animation-timing-function: cubic-bezier(0.2, 0.3, 0.25, 0.9);
+}
+
+.delay-400 {
     -webkit-animation-delay: 0.4s;
-            animation-delay: 0.4s;
-  }
-  
-  .delay-600 {
+    animation-delay: 0.4s;
+}
+
+.delay-600 {
     -webkit-animation-delay: 0.6s;
-            animation-delay: 0.6s;
-  }
-  
-  .delay-800 {
+    animation-delay: 0.6s;
+}
+
+.delay-800 {
     -webkit-animation-delay: 0.8s;
-            animation-delay: 0.8s;
-  }
+    animation-delay: 0.8s;
+}
 
-  .delay-1000 {
+.delay-1000 {
     -webkit-animation-delay: 1s;
-            animation-delay: 1s;
-  }
+    animation-delay: 1s;
+}
 
-  header a {
+header a {
     z-index: 10;
-  }
+}
 
-  .down-arrow {
+.down-arrow {
     justify-self: flex-end;
     font-size: 10rem;
     color: var(--primary-color);
     z-index: 10;
     transition: all 0.3s ease-in-out;
-  }
+}
 
-  header a:hover .down-arrow {
+header a:hover .down-arrow {
     color: var(--tertiary-color);
-  }
+}
 
 /* Hero Scroll */
 
 .contained {
-	margin: 0 auto;
-	width: 90%;
+    margin: 0 auto;
+    width: 90%;
 }
 
 .blurb {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-	padding: 1em 0;
-	position: relative;
-	box-shadow: 0px -10px 60px rgba(0,0,0,0.25);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    position: relative;
+    box-shadow: 0px -10px 60px rgba(0, 0, 0, 0.25);
 }
 
 .blurb-section {
-  background-color: var(--secondary-color);
-  padding: 2rem;
-  border-radius: 2rem;
-  color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: var(--primary-color);
 }
 
 .blurb-section p {
-  font-size: 1.6rem;
-  line-height: 1.4;
+    font-size: 1.6rem;
+    line-height: 1.4;
 }
 
 header img {
-  height: 100%;
-	width: 100vw;
-	max-width: none;
-	position: fixed;
-	top: 0%;
-	left: 50%;
-	transform: translateX(-50%);
+    height: 100%;
+    width: 100vw;
+    max-width: none;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Restaurants */
 
 .restaurants {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .restaurants-heading {
-  text-align: center;
-
+    text-align: center;
 }
 
 .restaurant-card {
-  display: flex;
-  color: #000 ;
-  width: 100%;
-  height: 30rem;
-  box-shadow:  0 .5rem 3rem 1rem rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ;
+    display: flex;
+    color: #000;
+    width: 100%;
+    height: 30rem;
+    box-shadow: 0 0.5rem 3rem 1rem rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
 }
 
 .restaurant-card-reverse {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 .restaurant-card:hover {
-  /* transform: scale(1.02); */
-  box-shadow:  0 .5rem 2rem 1rem rgba(0, 0, 0, 0.6);
+    /* transform: scale(1.02); */
+    box-shadow: 0 0.5rem 2rem 1rem rgba(0, 0, 0, 0.6);
 }
 
 .restaurant-img-container {
-  height: 100%;
-  width: 33%;
-  overflow: hidden;
-  
+    height: 100%;
+    width: 33%;
+    overflow: hidden;
 }
 
 .restaurant-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .restaurant-blurb {
-  width: 66%;
+    width: 66%;
 }
 .restaurant-blurb h2 {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 .restaurant-blurb p {
-  font-size: 1.6rem;
+    font-size: 1.6rem;
 }
 
 .restaurant-booking-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
 .restaurant-icon {
-  background-color: var(--tertiary-color);
-  color: #000;
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 1rem 2rem;
-  margin: 2rem 0;
-  border-radius: 3rem;
+    background-color: var(--tertiary-color);
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+    border-radius: 3rem;
 }
 
 .restaurant-booking-flex > * {
-  margin: 1rem 3rem;
+    margin: 1rem 3rem;
 }
-
 
 /* Your bookings view */
 
 .bookings-view {
-  margin: 5rem 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    margin: 5rem 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .bookings-img-container {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
 }
 
 .bookings-img {
-  height: 100%;
-	width: 100vw;
-	max-width: none;
-	position: fixed;
-  z-index: -1;
+    height: 100%;
+    width: 100vw;
+    max-width: none;
+    position: fixed;
+    z-index: -1;
 }
 
 .bookings-img-container::after {
-  content: '';
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(to bottom right, #469995, #101419);
-  opacity: 0.8;
-  z-index: 5;
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #469995, #101419);
+    opacity: 0.8;
+    z-index: 5;
 }
 
 .title {
-  text-align: center;
-  z-index: 10;
-  margin: 0 auto;
-  margin-bottom: 5rem;
-  padding: 0 2rem;
-  font-size: 5rem;
-  color: #000;
-  letter-spacing: 1rem;
-  border-radius: 2rem;
-  max-width: 85vw;
+    text-align: center;
+    z-index: 10;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    padding: 0 2rem;
+    font-size: 5rem;
+    color: #000;
+    letter-spacing: 1rem;
+    border-radius: 2rem;
+    max-width: 85vw;
 }
 
 @media screen and (max-width: 700px) {
-
-  .bookings-title{
-    font-size: 2.8rem;
-  }
+    .bookings-title {
+        font-size: 2.8rem;
+    }
 }
 
 .bookings {
-  min-width: 70vw;
-  min-height: 60vh;
-  max-width: 85vw;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  border-radius: 3rem;
+    min-width: 70vw;
+    min-height: 60vh;
+    max-width: 85vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border-radius: 3rem;
 }
 
 .bookings-list {
-  margin: 3rem 0;
-  margin-left: 2rem;
-  background-color: none;
-  
+    margin: 3rem 0;
+    margin-left: 2rem;
+    background-color: none;
 }
 
 .booking {
-  background-color: transparent;
-  border: none;
-  margin: 1rem;
+    background-color: transparent;
+    border: none;
+    margin: 1rem;
 }
 
 .booking a {
-  color: var(--tertiary-color);
-  transition: 0.2s ease-in;
+    color: var(--tertiary-color);
+    transition: 0.2s ease-in;
 }
 
 .booking a:hover {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .booking a:active h1 {
-  transform: scale(0.98);
+    transform: scale(0.98);
 }
-
 
 /* Single Booking */
 
 .return {
-  position: fixed;
-	top: 7rem;
-	left: 2rem;
-	color: var(--tertiary-color);
-	font-size: 3rem;
-	z-index: 100;
-} 
+    position: fixed;
+    top: 7rem;
+    left: 2rem;
+    color: var(--tertiary-color);
+    font-size: 3rem;
+    z-index: 100;
+}
 
 .booking-detail {
-  min-width: 70vw;
-  min-height: 60vh;
-  max-width: 85vw;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3rem;
+    min-width: 70vw;
+    min-height: 60vh;
+    max-width: 85vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3rem;
 }
 
 .detail-title {
-  margin-bottom: 6rem;
-  letter-spacing: 1rem;
-  text-transform: uppercase;
+    margin-bottom: 6rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
 }
 
 .detail-flex {
-  width: 100%;
-  padding: 1rem 3rem;
-  display: flex;
-  justify-content: space-between;
+    width: 100%;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-
 .booking-btn {
-  background-color: var(--primary-color);
-  font-size: 2.5rem;
-  transition: all 0.2s ease-in;
+    background-color: var(--primary-color);
+    font-size: 2.5rem;
+    transition: all 0.2s ease-in;
 }
 
 .booking-btn:active {
-  transform: scale(0.98);
+    transform: scale(0.98);
 }
 
-
 .cancel-btn {
-  background-color: var(--tertiary-color);
+    background-color: var(--tertiary-color);
 }
 
 .cancel-btn:hover {
-  background-color: red;
+    background-color: red;
 }
 
 /* Account pages */
 
 .gradient-bg {
-  background: linear-gradient(to bottom right, #469995, #101419);
+    background: linear-gradient(to bottom right, #469995, #101419);
 }
 
 .body-fullscreen {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 /* Footer */
 
 .footer {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  font-size: 2rem;
-  background-color: var(--secondary-color);
-  z-index: 20;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 2rem;
+    background-color: var(--secondary-color);
+    z-index: 20;
 }
 
 .footer-el {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .footer p,
 .footer i {
     color: var(--primary-color);
-
 }
-
 
 /* Utilities */
 
@@ -551,45 +537,41 @@ header img {
 /* Media quires */
 
 @media screen and (min-width: 640px) {
-   
     .hero {
-      background-position: 50% 0;
-    }
-    
-    .hero-container {
-      height: 100vh;
+        background-position: 50% 0;
     }
 
+    .hero-container {
+        height: 100vh;
+    }
 }
 @media screen and (width < 768px) {
-  /* restaurants */
-  .booking-btn {
-    font-size: 1.5rem;
-  }
+    /* restaurants */
+    .booking-btn {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (width < 500px) {
+    /* restaurants */
+    .restaurant-card {
+        height: 60rem;
+        flex-direction: column;
+    }
 
-  /* restaurants */
-  .restaurant-card {
-    height: 60rem;
-    flex-direction: column;
-  } 
+    .restaurant-img-container {
+        width: 100%;
+    }
 
-  .restaurant-img-container {
-    width: 100%;
-  }
+    .restaurant-blurb {
+        width: 100%;
+    }
 
-  .restaurant-blurb {
-    width: 100%;
-  }
+    .title {
+        font-size: 3rem;
+    }
 
-  .title {
-    font-size: 3rem;
-  }
-
-  .restaurant-blurb p {
-    font-size: 1.2rem;
-  }
+    .restaurant-blurb p {
+        font-size: 1.2rem;
+    }
 }
-
