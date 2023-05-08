@@ -561,13 +561,32 @@ header img {
     }
 
 }
+@media screen and (width < 768px) {
+  /* restaurants */
+  .booking-btn {
+    font-size: 1.5rem;
+  }
+}
 
 @media screen and (width < 500px) {
 
   /* restaurants */
-   .title {
+  .restaurant-card {
+    height: 60rem;
+    flex-direction: column;
+  } 
+
+  .restaurant-img-container {
+    width: 100%;
+  }
+
+  .restaurant-blurb {
+    width: 100%;
+  }
+
+  .title {
     font-size: 3rem;
-   }
+  }
 
   .restaurant-blurb p {
     font-size: 1.2rem;
