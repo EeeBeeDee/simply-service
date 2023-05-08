@@ -253,6 +253,11 @@ nav i {
   color: var(--primary-color);
 }
 
+.blurb-section p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
 header img {
   height: 100%;
 	width: 100vw;
