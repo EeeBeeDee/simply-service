@@ -17,6 +17,18 @@ html {
     box-sizing: border-box;
 }
 
+/* Alerts */
+#alerts {
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    transition: transform 0.6s ease-in;
+}
+
+.hide {
+    transform: translateX(-100%);
+}
+
 /* Navbar */
 
 nav {
