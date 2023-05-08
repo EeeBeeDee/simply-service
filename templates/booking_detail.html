@@ -23,7 +23,7 @@
                     <h3>{{ booking.no_of_adults }} / {{ booking.no_of_children }}</h3>
                 </div>
                 <div class="detail-flex mt-5">
-                    <a href="{% url 'booking_update' booking.id booking.slug %}"class="btn booking-btn">Update</a>
+                    <a href="{% url 'booking_update' booking.id %}"class="btn booking-btn">Update</a>
                     <form action="{% url 'booking_detail' slug=booking.slug %}" method="post" >
                         {% csrf_token %}
                         <input type="submit" class="btn booking-btn cancel-btn" value="Cancel">

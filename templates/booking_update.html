@@ -35,7 +35,7 @@
 		<div class="section-center">
 			<div class="container">
 				<div class="row">
-					<form method="post" action="{% url 'bookings' %}" enctype="multipart/form-data" class="booking-form">
+					<form method="post" action="{% url 'booking_update' booking.id %}" enctype="multipart/form-data" class="booking-form">
 						<div class="form-header">
 							<h1>Make your reservation</h1>
 						</div>

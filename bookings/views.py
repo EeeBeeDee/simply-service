@@ -64,15 +64,33 @@ def booking_update(request, id):
     form = BookingsForm(request.POST or None, instance=booking)
     if request.method == "POST":
         if form.is_valid():
-            # instance = form.save(commit=False)
-            current_time = str(form.instance.time)
-            current_time = current_time.replace(":", "")
-            form.instance.slug = f'{form.instance.name}-{current_time}-{form.instance.date}'
             form.save()
-            return redirect('your_bookings')
+            messages.success(request, "Your booking has been successfully updated")
+            return redirect(booking_detail, slug=booking.slug)
+        else:
+            messages.error(request, "There was an error. Please try again.")
 
-    return render(request, 'booking_update.html',
-        {'booking': booking,
-        "form": form})
+    context = {
+        "booking": booking,
+        "form": form,
+    }
+    return render(request, "booking_update.html", context)
+
+# @login_required()
+# def booking_update(request, id):
+#     booking = get_object_or_404(Bookings, id=id)
+#     form = BookingsForm(request.POST or None, instance=booking)
+#     if request.method == "POST":
+#         if form.is_valid():
+#             # instance = form.save(commit=False)
+#             current_time = str(form.instance.time)
+#             current_time = current_time.replace(":", "")
+#             form.instance.slug = f'{form.instance.name}-{current_time}-{form.instance.date}'
+#             form.save()
+#             return redirect('your_bookings')
+
+#     return render(request, 'booking_update.html',
+#         {'booking': booking,
+#         "form": form})
 
 # initial={'email': request.user.email}
