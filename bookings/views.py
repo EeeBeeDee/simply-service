@@ -26,9 +26,10 @@ def bookings(request):
             current_time = current_time.replace(":", "")
             instance.slug = f'{instance.name}-{current_time}-{instance.date}'
             instance.save()
+            messages.success(request, "Your reservation has been accepted!")
             return redirect('your_bookings')
         else:
-            print(form.errors.as_data())
+            messages.error(request, "Your reservation could not be made, please try again.")
     else:
         form = BookingsForm()
     return render(request, 'bookings.html', {'form': form})
@@ -54,6 +55,7 @@ def booking_detail(request, slug):
     if request.method == "POST":
         booking = get_object_or_404(Bookings, slug=slug)
         booking.delete()
+        messages.success(request, "Your booking has been successfully cancelled")
         return HttpResponseRedirect(reverse('your_bookings'))
 
     return render(request, 'booking_detail.html', {'booking': booking})
