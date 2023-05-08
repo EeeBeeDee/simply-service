@@ -506,6 +506,75 @@ header img {
     overflow: hidden;
 }
 
+.account-flex {
+    background: #101419;
+    max-width: 80%;
+    height: 45rem;
+    max-height: 75%;
+    border-radius: 2rem;
+}
+
+.account-flex h1 {
+    color: var(--primary-color);
+    font-size: 5rem;
+    align-self: self-start;
+    justify-self: start;
+    margin-left: 4rem;
+}
+
+.account-flex p {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.account-flex p a {
+    color: var(--primary-color);
+}
+
+form p {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+
+
+form a {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-right: 4rem;
+}
+
+form p {
+    display: flex;
+    justify-content: end;
+}
+
+form p label {
+    color: var(--primary-color);
+    margin-right: 5rem;
+    margin-bottom: 1rem;
+}
+
+form p input {
+
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.errorlist {
+    color: var(--tertiary-color);
+    font-size: 1.2rem;
+}
+
+.auth-btn {
+    margin-top: 2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 2rem;
+}
+
 /* Footer */
 
 .footer {
