@@ -59,6 +59,10 @@ nav i {
 
 /* Hero */
 
+main {
+  width: 100%;
+}
+
 .hero-container {
     height: 100vh;
     width: 100%;
@@ -70,6 +74,7 @@ nav i {
 }
 
 .hero-img {
+  width: 100%;
     display: inline-block;
     object-fit: cover;
 }
@@ -237,6 +242,7 @@ nav i {
 }
 
 .blurb {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -543,6 +549,7 @@ header img {
 }
 
 /* Media quires */
+
 @media screen and (min-width: 640px) {
    
     .hero {
@@ -553,5 +560,17 @@ header img {
       height: 100vh;
     }
 
+}
+
+@media screen and (width < 500px) {
+
+  /* restaurants */
+   .title {
+    font-size: 3rem;
+   }
+
+  .restaurant-blurb p {
+    font-size: 1.2rem;
+  }
 }
 
