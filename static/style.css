@@ -419,7 +419,6 @@ header img {
 
 .bookings {
     min-width: 70vw;
-    min-height: 60vh;
     max-width: 85vw;
     margin: 0 auto;
     display: flex;
@@ -630,6 +629,10 @@ form p input {
     /* restaurants */
     .booking-btn {
         font-size: 1.5rem;
+    }
+
+    .footer {
+        font-size: 1.6rem;
     }
 }
 
