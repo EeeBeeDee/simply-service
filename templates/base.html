@@ -59,9 +59,6 @@
                                 >Book Now!</a
                             >
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#!">Contact Us</a>
-                        </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'your_bookings' %}"
@@ -106,10 +103,10 @@
             </div>
         </nav>
 
+
         {% if messages %}
         <section id="alerts">
             {% for msg in messages %}
-                <!-- all django message tags mirror bootstrap, except error/danger -->
                 <aside class="alert {% if msg.tags == 'error' %}alert-danger{% else %}alert-{{ msg.tags }}{% endif %} text-center" role="alert">
                     <h3>{{ msg }}</h3>
                 </aside>
