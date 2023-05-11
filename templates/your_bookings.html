@@ -9,17 +9,30 @@
 <section class="bookings-view">
     <h2 class="title mask-custom">Your Reservations</h2>
 
-    <div class="bookings mask-custom">
-        <ul class="bookings-list list-group list-group-flush">
+    <!-- Bookings table, reversed in CSS so I can use the (~) general sibling selector on the right most view button -->
+
+    <table class="bookings-table mask-custom">
+        <thead>
+            <tr>
+                <th class="th-right"></th>
+                <th>Adults/Kids</th>
+                <th>Restaurant</th>
+                <th class="th-left">Date & Time</th>
+            </tr>
+        </thead>
+        <tbody>
             {% for booking in bookings %}
-            <li class="booking list-group-item">
-                <a href="{% url 'booking_detail' slug=booking.slug %}"
-                    ><h1>{{ booking.restaurant }} - {{ booking.date }}</h1></a
-                >
-            </li>
+            
+                <tr>
+                    <td class="view-btn"><a class="btn" href="{% url 'booking_detail' booking.slug %}">View</a></td>
+                    <td>{{booking.no_of_adults}}/{{booking.no_of_children}}</td>
+                    <td>{{ booking.restaurant }}</td>
+                    <td style="direction: ltr;">{{ booking.time }} on {{ booking.date }}</td>
+                </tr>
+            
             {% endfor %}
-        </ul>
-    </div>
+        </tbody>
+    </table>
 
     <a href="{% url 'bookings' %}" class="hero-button">Book Now!</a>
 </section>
