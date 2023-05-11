@@ -222,3 +222,11 @@
 .booking-form .submit-btn:focus {
 	opacity: 0.9;
 }
+
+input {
+	color-scheme: dark;
+}
+
+input::-webkit-calendar-picker-indicator {
+	font-size: 3rem;
+}
