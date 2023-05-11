@@ -113,6 +113,34 @@ Using [Balsamiq](https://balsamiq.com/wireframes/) I created the skeleton and in
 -   [PEP8CI - Python](https://pep8ci.herokuapp.com/)
 
 
+# Deployment
+
+### Local Deployment
+
+In order to make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone my repository:
+
+- `git clone https://github.com/EeeBeeDee/simply-service.git`
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/EeeBeeDee/simply-service)
+
+### Remote Deployment
+
+
+These steps can be taken to deploy the cloned site from above to [Heroku](https://signup.heroku.com/login):
+
+- Create an account with [Heroku](https://signup.heroku.com/login).
+- Once on your Dashboard select "New" first followed by "Create a new app".
+- Create a unique name for the app. It must be unique as it will be used for the applications URL.
+- Once created you will see a "Settings" button at the end of this apps dashboards navbar.
+- Find the config Vars you will have to create key value pairs that match up with your settings.py file. I suggest using an env.py file which you include in your .gitignore file. A good guide on how to do so can be found [here.](https://www.twilio.com/blog/environment-variables-python)
+- Your key value pairs should look like this:
+    - SECRET_KEY: The Secret Key for your project, this can be anything you choose.
+    - DATABASE_URL: The URL from your ElephantSQL dashboard. Use the [ElephantSQL Docs](https://www.elephantsql.com/docs/index.html) if you are not sure how.
+    - CLOUNDINARY_URL: The URL from your Cloudinary account.
+- Then navigate to "Deploy". 
+- Use the connect to github button then search for the correct repo then select which branch is to be deployed, most likely main by default.
 
 
 
