@@ -1,12 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
-from simply_service import settings
 from django import forms
-
-# Create your models here.
 
 
 class Bookings(models.Model):
+    """
+    DB Model for individual bookings.
+    """
     RESTAURANTS = [
         ('Tonys', 'Tonys'),
         ('Zaytoons', 'Zaytoons'),
