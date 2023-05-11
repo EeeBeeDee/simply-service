@@ -142,5 +142,7 @@ These steps can be taken to deploy the cloned site from above to [Heroku](https:
 - Then navigate to "Deploy". 
 - Use the connect to github button then search for the correct repo then select which branch is to be deployed, most likely main by default.
 
+# Testing
 
+All Testing is documented separately in the [TESTING.md](/TESTING.md).
 
