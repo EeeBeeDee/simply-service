@@ -99,7 +99,7 @@ TEMPLATES = [
     },
 ]
 
-# AUTH_USER_MODEL = 'user_profiles.UserProfile'
+AUTH_USER_MODEL = 'user_profiles.UserProfile'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
