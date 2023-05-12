@@ -22,6 +22,7 @@ def bookings(request):
         if form.is_valid():
             instance = form.save(commit=False)
             instance.name = user
+            instance.email = user.email
             current_time = str(instance.time)
             current_time = current_time.replace(":", "")
             instance.slug = f'{instance.name}-{current_time}-{instance.date}'
@@ -29,6 +30,8 @@ def bookings(request):
             messages.success(request, "Your reservation has been accepted!")
             return redirect('your_bookings')
         else:
+            print(form.errors.as_data())
+            print(user.email)
             messages.error(request, "Your reservation could not be made, please try again.")
     else:
         form = BookingsForm()

@@ -1,8 +1,9 @@
-from django import forms
-from .models import Bookings
-from django.forms import (TextInput, DateInput, NumberInput,
-                          TimeInput, EmailInput, Select)
 from datetime import date
+from django import forms
+from django.forms import (DateInput, NumberInput,
+                          TimeInput, EmailInput, Select)
+from django.contrib.auth.models import User
+from .models import Bookings
 
 
 class BookingsForm(forms.ModelForm):
@@ -13,7 +14,7 @@ class BookingsForm(forms.ModelForm):
     class Meta:
         model = Bookings
         fields = ['restaurant', 'time', 'date', 'no_of_adults',
-                  'no_of_children', 'email', 'number']
+                  'no_of_children', 'number']
         widgets = {
             'restaurant': Select(attrs={
                 'class': 'form-control',
@@ -40,10 +41,6 @@ class BookingsForm(forms.ModelForm):
                 'min': '0',
                 'max': '9',
                 'placeholder': 'no of children',
-            }),
-            'email': EmailInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Enter your Email',
             }),
             'number': NumberInput(attrs={
                 'class': 'form-control',

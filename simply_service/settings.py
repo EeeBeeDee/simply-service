@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     'homepage',
     'bookings',
+    'user_profiles'
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
@@ -97,6 +98,8 @@ TEMPLATES = [
         },
     },
 ]
+
+# AUTH_USER_MODEL = 'user_profiles.UserProfile'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -158,7 +161,7 @@ ACCOUNT_FORMS = {
     "reset_password": "allauth.account.forms.ResetPasswordForm",
     "reset_password_from_key": "allauth.account.forms.ResetPasswordKeyForm",
     "set_password": "allauth.account.forms.SetPasswordForm",
-    # "signup": "profiles.forms.SignupForm",
+    "signup": "user_profiles.forms.CustomSignupForm",
     "user_token": "allauth.account.forms.UserTokenForm",
 }
 
