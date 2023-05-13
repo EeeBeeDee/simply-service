@@ -54,12 +54,17 @@ As Bootstrap was used fairly extensively, not many media queries were needed to 
 
 ### **Epic 7: User Accounts**
 
-### **Epic 8: Restaurant Creation**
 
 ### **Epic 9: Unique Error Pages**
 
+Low down the list but easy to implement I added unique 404 and 500 error pages. Although this was only realistically one task I added this as an epic as it was something I had never done and contained a bit of both front end and django work. 
+
 
 ## **Unresolved Epics**
+
+### **Epic 8: Restaurant Creation**
+
+Something planned for the future I will 100% add in my own time but having two types of accounts. One for customers and restaurants and then another DB model for restaurants was just too much to attempt while first getting my head around django.
 
 ## Skeleton Plane
 
