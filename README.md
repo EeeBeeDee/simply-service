@@ -50,6 +50,8 @@ As Bootstrap was used fairly extensively, not many media queries were needed to 
 
 ### **Epic 6: Documentation and Testing**
 
+Create both my TESTING.md and this README.md to document the creation and implementation to this project.
+
 ## **Non Essential Epics**
 
 ### **Epic 7: User Accounts**
@@ -74,6 +76,25 @@ Using [Balsamiq](https://balsamiq.com/wireframes/) I created the skeleton and in
 
 ### Schema
 
+## Scope Plane
+
+- Landing page which conveys what the website is used for.
+- Allow a user to create an account which will then allow them to make, update and delete bookings.
+- Make sure the website is functional and presentable in all formats and screen sizes.
+
+## Structure Plane 
+
+### Features
+
+### Design 
+
+#### Colour pallette 
+
+![Colour pallette](/documentation/colour-pallette.png)
+
+I knew I wanted a light blue teal as the main colour throughout. Then instead of just a pure black the off black I have included contains a hint of blue. As a tertiary I thought having a unique colour for the usual error and delete red that I could use in other places too without having too many colors. Another "Colour" used throughout is a white with an alpha value of less than 1 with a blur effect added to give of a glassy feel.
+
+#### Typography 
 
 # Technologies Used
 
