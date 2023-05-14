@@ -97,6 +97,16 @@
 		</div>
 	</div>
 
+	{% if messages %}
+        <section id="alerts">
+            {% for msg in messages %}
+                <aside class="alert {% if msg.tags == 'error' %}alert-danger{% else %}alert-{{ msg.tags }}{% endif %} text-center" role="alert">
+                    <h3>{{ msg }}</h3>
+                </aside>
+            {% endfor %}
+        </section>
+    {% endif %}
+
 	<!-- MDB -->
     <script
     type="text/javascript"
