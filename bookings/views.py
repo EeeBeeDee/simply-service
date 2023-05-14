@@ -29,7 +29,8 @@ def bookings(request):
             messages.success(request, "Your reservation has been accepted!")
             return redirect('your_bookings')
         else:
-            messages.error(request, "Your reservation could not be made, please try again.")
+            messages.error(request, ("Your reservation could not be made,"
+            "please try again."))
     else:
         form = BookingsForm()
     return render(request, 'bookings.html', {'form': form})

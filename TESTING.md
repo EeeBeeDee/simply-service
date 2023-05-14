@@ -44,5 +44,9 @@ Feature Tested | Expected Result | Pass/Fail
 Login required | logged in status required to view reservations page | &check;
 All bookings viewable | You can see the full list of users bookings | &check;
 Book now btn | you can book from reservations screen | &check;
-Update booking | bookings can be changed and updated | &check;
-Delete booking | bookings can be deleted |&check;
+View single booking | Click into each booking for more detail | &check;
+Update booking | Bookings can be changed and updated | &check;
+Delete booking | Bookings can be deleted | &check;
+Update redirect | User brought back to individual booking page after updating | &check;
+Delete redirect | User brought back to your bookings page after deleting a booking | &check;
+Messages | after deleting or updating user given a message to confirm | &check;
