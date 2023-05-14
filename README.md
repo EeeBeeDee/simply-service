@@ -172,3 +172,12 @@ These steps can be taken to deploy the cloned site from above to [Heroku](https:
 
 All Testing is documented separately in the [TESTING.md](/TESTING.md).
 
+# Credits
+
+- [Login mixin for classes](https://stackoverflow.com/questions/72602785/django-attributeerror-function-object-has-no-attribute-as-view-showing-in)
+- [Understanding reverses](https://stackoverflow.com/questions/11241668/what-is-reverse)
+- [Update and edit databases](https://www.youtube.com/watch?v=jCM-m_3Ysqk)
+- [Net Ninja in general but this one in particular linking forms to model and frontend](https://www.youtube.com/watch?v=jBGmqxpw0V8)
+- [Go directly to a section of a page with a django link](https://stackoverflow.com/questions/55055523/how-to-configure-django-url-to-point-to-a-specific-section-in-the-page)
+- [Update form instances](https://www.youtube.com/watch?v=jCM-m_3Ysqk)
+- [Help customizing all auth forms and models](https://dev.to/gajesh/the-complete-django-allauth-guide-la3)
