@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class UserProfile(AbstractUser):
-    phone = models.IntegerField(null=True)
+    phone = models.CharField(null=True, max_length=30)
 
     def __str__(self):
         return self.username
