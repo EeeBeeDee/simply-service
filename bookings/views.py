@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
-from django.contrib.auth.models import User
-from user_profiles.models import UserProfile
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.mail import send_mail
 from django.views import View
 from django.contrib import messages
+from user_profiles.models import UserProfile
 from .models import Bookings
 from .forms import BookingsForm
 
@@ -31,6 +31,18 @@ def bookings(request):
             instance.slug = f'{instance.name}-{current_time}-{instance.date}'
             instance.save()
             messages.success(request, "Your reservation has been accepted!")
+            if user.email:
+                send_mail(
+                    f"Dinner reservation in {instance.restaurant}",
+                    (f"Hi {instance.name},\n\nYou "
+                        f"are booked into {instance.restaurant} "
+                        f"on the {instance.date} at {instance.time}. \n"
+                        "If you need to cancel or update your booking please "
+                        "use our website. \n\nBest regards, \n\n"
+                        "Simply Service Team"),
+                    "simplyservice.bookings@gmail.com",
+                    [user.email]
+                )
             return redirect('your_bookings')
         else:
             print(form.errors.as_data())
