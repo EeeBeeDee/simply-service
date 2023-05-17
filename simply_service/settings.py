@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     'homepage',
     'bookings',
+    'user_profiles'
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
@@ -97,6 +98,15 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTH_USER_MODEL = 'user_profiles.UserProfile'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+ACCOUNT_EMAIL_REQUIRED = True
 
 WSGI_APPLICATION = 'simply_service.wsgi.application'
 
@@ -151,7 +161,7 @@ ACCOUNT_FORMS = {
     "reset_password": "allauth.account.forms.ResetPasswordForm",
     "reset_password_from_key": "allauth.account.forms.ResetPasswordKeyForm",
     "set_password": "allauth.account.forms.SetPasswordForm",
-    # "signup": "profiles.forms.SignupForm",
+    "signup": "user_profiles.forms.CustomSignupForm",
     "user_token": "allauth.account.forms.UserTokenForm",
 }
 
@@ -173,3 +183,11 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# email Settings
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'simplyservice.bookings@gmail.com'
+EMAIL_HOST_PASSWORD = 'deqdizuocpqzmnbe'
+EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = True

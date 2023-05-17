@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
-from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.mail import send_mail
 from django.views import View
 from django.contrib import messages
+from user_profiles.models import UserProfile
 from .models import Bookings
 from .forms import BookingsForm
 
@@ -16,23 +17,39 @@ def bookings(request):
     """
     Make a reservation page
     """
-    user = get_object_or_404(User, username=request.user)
+    user = get_object_or_404(UserProfile, username=request.user)
+    form = BookingsForm(initial={'number': user.phone})
+    print(user.phone)
     if request.method == "POST":
         form = BookingsForm(request.POST)
         if form.is_valid():
             instance = form.save(commit=False)
             instance.name = user
+            instance.email = user.email
             current_time = str(instance.time)
             current_time = current_time.replace(":", "")
             instance.slug = f'{instance.name}-{current_time}-{instance.date}'
             instance.save()
             messages.success(request, "Your reservation has been accepted!")
+            if user.email:
+                send_mail(
+                    f"Dinner reservation in {instance.restaurant}",
+                    (f"Hi {instance.name},\n\nYou "
+                        f"are booked into {instance.restaurant} "
+                        f"on the {instance.date} at {instance.time}. \n"
+                        "If you need to cancel or update your booking please "
+                        "use our website. \n\nBest regards, \n\n"
+                        "Simply Service Team"),
+                    "simplyservice.bookings@gmail.com",
+                    [user.email]
+                )
             return redirect('your_bookings')
         else:
-            messages.error(request, ("Your reservation could not be made,"
-            "please try again."))
+            print(form.errors.as_data())
+            print(user.email)
+            messages.error(request, "Your reservation could not be made, please try again.")
     else:
-        form = BookingsForm()
+        form = BookingsForm(initial={'number': user.phone, 'email': user.email})
     return render(request, 'bookings.html', {'form': form})
 
 
@@ -61,6 +78,7 @@ def booking_detail(request, slug):
 
     return render(request, 'booking_detail.html', {'booking': booking})
 
+
 @login_required()
 def booking_update(request, id):
     booking = get_object_or_404(Bookings, id=id)
@@ -78,22 +96,3 @@ def booking_update(request, id):
         "form": form,
     }
     return render(request, "booking_update.html", context)
-
-# @login_required()
-# def booking_update(request, id):
-#     booking = get_object_or_404(Bookings, id=id)
-#     form = BookingsForm(request.POST or None, instance=booking)
-#     if request.method == "POST":
-#         if form.is_valid():
-#             # instance = form.save(commit=False)
-#             current_time = str(form.instance.time)
-#             current_time = current_time.replace(":", "")
-#             form.instance.slug = f'{form.instance.name}-{current_time}-{form.instance.date}'
-#             form.save()
-#             return redirect('your_bookings')
-
-#     return render(request, 'booking_update.html',
-#         {'booking': booking,
-#         "form": form})
-
-# initial={'email': request.user.email}
