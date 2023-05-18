@@ -18,7 +18,7 @@ def bookings(request):
     Make a reservation page
     """
     user = get_object_or_404(UserProfile, username=request.user)
-    form = BookingsForm(initial={'number': user.phone})
+    form = BookingsForm()
     print(user.phone)
     if request.method == "POST":
         form = BookingsForm(request.POST)
@@ -49,7 +49,7 @@ def bookings(request):
             print(user.email)
             messages.error(request, "Your reservation could not be made, please try again.")
     else:
-        form = BookingsForm(initial={'number': user.phone, 'email': user.email})
+        form = BookingsForm(initial={ 'number': user.phone, 'email': user.email})
     return render(request, 'bookings.html', {'form': form})
 
 

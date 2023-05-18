@@ -99,6 +99,20 @@ Using [Balsamiq](https://balsamiq.com/wireframes/) I created the skeleton and in
 
 ### Features
 
+#### Navbar
+
+![navbar](/documentation/navbar.png)
+![navbar-closed](/documentation/navbar-closed.png)
+![navbar-open](/documentation/navbar-open.png)
+
+Navbar was designed with the glass and 'clean' motif I had planned for the website, it features throughout the website and is responsive due to bootstrap stylings.
+
+Options available change depending on the logged in status of the user.
+
+#### Hero/Landing 
+
+![Hero](/documentation/desktop-img.png)
+
 ### Design 
 
 #### Colour pallette 
