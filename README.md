@@ -109,6 +109,8 @@ I knew I wanted a light blue teal as the main colour throughout. Then instead of
 
 #### Typography 
 
+For typography I decided to go for a singular font from [Google Fonts](https://fonts.google.com) called [Wix Madefor Display](https://fonts.google.com/specimen/Wix+Madefor+Display). After trying a few out I felt it meshes well with the soft, rounded feel I have aimed for with the design. 
+
 # Technologies Used
 
 ### Languages and Frameworks Used
@@ -183,7 +185,7 @@ These steps can be taken to deploy the cloned site from above to [Heroku](https:
 
 # Testing
 
-All Testing is documented separately in the [TESTING.md](/TESTING.md).
+All Testing is documented separately in the [TESTING.md](/TESTING.md) file.
 
 # Credits
 

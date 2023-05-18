@@ -10,9 +10,9 @@ class Bookings(models.Model):
     """
     RESTAURANTS = [
         ('Tonys', 'Tonys'),
-        ('Zaytoons', 'Zaytoons'),
-        ('Mercedes', 'Mercedes'),
-        ('Audi', 'Audi'),
+        ('The Char Grill', 'The Char Grill'),
+        ('Mama Mia', 'Mama mia'),
+
     ]
     restaurant = models.CharField(max_length=100, choices=RESTAURANTS)
     time = models.TimeField()
