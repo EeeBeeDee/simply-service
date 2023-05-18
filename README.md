@@ -48,18 +48,29 @@ With the back end functionality in place this epic included all design and front
 
 As Bootstrap was used fairly extensively, not many media queries were needed to facilitate a responsive design and this epic ended up being a lot smaller than I had imagined when planning the site.
 
+---
+
 ### **Epic 6: Documentation and Testing**
 
 Create both my TESTING.md and this README.md to document the creation and implementation to this project.
+
+---
 
 ## **Non Essential Epics**
 
 ### **Epic 7: User Accounts**
 
+User accounts have been extended slightly to allow for email and phone numbers to be taken on registration and then used to autopopulate the bookings form. My plan was for more extension to the model and to use it for the creation of user generated restaurants. 
+
+Extending the user profile while using django-allauth turned out to be fairly cumbersome and lacking in documentation so due to time constraints I didn't fully realize this feature.
+
+---
 
 ### **Epic 9: Unique Error Pages**
 
 Low down the list but easy to implement I added unique 404 and 500 error pages. Although this was only realistically one task I added this as an epic as it was something I had never done and contained a bit of both front end and django work. 
+
+---
 
 
 ## **Unresolved Epics**
@@ -67,6 +78,8 @@ Low down the list but easy to implement I added unique 404 and 500 error pages. 
 ### **Epic 8: Restaurant Creation**
 
 Something planned for the future I will 100% add in my own time but having two types of accounts. One for customers and restaurants and then another DB model for restaurants was just too much to attempt while first getting my head around django.
+
+---
 
 ## Skeleton Plane
 
