@@ -140,6 +140,8 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
     - Font Awesome was used for the chevron arrows used for navigation through the site
 - [Bootstrap:](https://getbootstrap.com/)
     - Bootstrap was used manly for formatting, positioning and responsive design throughout the project.
+- [MDB-Material Design Bootstrap:](https://mdbootstrap.com/)
+    - MDB was used for some of the theming.
 - [JQuery:](https://jquery.com/)
     - Used very lightly as not much JS was needed in the final version of the website.
 - [Django-Allauth:](https://django-allauth.readthedocs.io/en/latest/index.html)

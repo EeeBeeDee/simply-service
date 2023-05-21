@@ -22,6 +22,7 @@ html {
 
 body {
     font-family: 'Wix Madefor Display', sans-serif;
+    color: #000;
 }
 
 /* Alerts */
@@ -40,6 +41,10 @@ body {
 
 nav {
     font-size: 1.6rem;
+}
+
+.nav-link {
+    color: #000 !important;
 }
 .nav-link:hover {
     color: var(--tertiary-color);
