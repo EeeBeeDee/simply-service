@@ -1,9 +1,10 @@
 /* jshint esversion: 11 */
+/*globals $:false */
 
-const datePicker = document.getElementById('date')
+const datePicker = document.getElementById('date');
 const date = new Date().toJSON().split("T")[0];
 
-datePicker.min = date
+datePicker.min = date;
         
         
 $('.form-control').each(function () {
