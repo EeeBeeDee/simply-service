@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 const alerts = document.getElementById('alerts')
 const restaurantLink = document.getElementById('restaurant-link')
 const navbar = document.querySelector('.navbar-collapse')

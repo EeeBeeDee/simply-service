@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 const datePicker = document.getElementById('date')
 const date = new Date().toJSON().split("T")[0];
 
