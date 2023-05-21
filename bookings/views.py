@@ -47,14 +47,16 @@ def bookings(request):
         else:
             print(form.errors.as_data())
             print(user.email)
-            messages.error(request, "Your reservation could not be made, please try again.")
+            messages.error(request, ("Your reservation could not be "
+                                     "made, please try again."))
     else:
-        form = BookingsForm(initial={ 'number': user.phone, 'email': user.email})
+        form = BookingsForm(initial={'number': user.phone,
+                                     'email': user.email})
     return render(request, 'bookings.html', {'form': form})
 
 
 class YourBookings(LoginRequiredMixin, View):
-    
+
     def get(self, request):
         bookings = Bookings.objects.filter(name=request.user)
         # bookings = get_object_or_404(queryset)
@@ -73,7 +75,8 @@ def booking_detail(request, slug):
     if request.method == "POST":
         booking = get_object_or_404(Bookings, slug=slug)
         booking.delete()
-        messages.success(request, "Your booking has been successfully cancelled")
+        messages.success(request, ("Your booking has been "
+                                   "successfully cancelled"))
         return HttpResponseRedirect(reverse('your_bookings'))
 
     return render(request, 'booking_detail.html', {'booking': booking})
@@ -86,7 +89,8 @@ def booking_update(request, id):
     if request.method == "POST":
         if form.is_valid():
             form.save()
-            messages.success(request, "Your booking has been successfully updated")
+            messages.success(request, ("Your booking has been "
+                                       "successfully updated"))
             return redirect(booking_detail, slug=booking.slug)
         else:
             messages.error(request, "There was an error. Please try again.")

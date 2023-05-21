@@ -2,8 +2,6 @@ from datetime import date
 from django import forms
 from django.forms import (DateInput, NumberInput,
                           TimeInput, EmailInput, Select)
-from django.contrib.auth.models import User
-from user_profiles.models import UserProfile
 from .models import Bookings
 
 
@@ -11,7 +9,6 @@ class BookingsForm(forms.ModelForm):
     """
     Form used in bookings.html template. Connects to Bookings model
     """
-
 
     class Meta():
         model = Bookings
@@ -52,4 +49,3 @@ class BookingsForm(forms.ModelForm):
                 'placeholder': 'Enter your Phone Number',
             }),
         }
-

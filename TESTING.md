@@ -2,10 +2,17 @@
 
 ## Validation and Linting 
 
+### HTML
+
 [W3C - HTML](https://validator.w3.org/)
 
-
 The website was run through the validator by URL instead of file to avoid issues with Djangos variables and extends used in its templates.
+
+### Python 
+
+[CI Linter](https://pep8ci.herokuapp.com/)
+
+All files were passed through Code Institutes liniting app
 
 ## Manual Testing 
 
