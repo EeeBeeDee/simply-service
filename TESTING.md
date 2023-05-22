@@ -10,6 +10,8 @@ The website was run through the validator by URL instead of file to avoid issues
 
 A strange warning appeared on some pages where it says there is no lang attribute on some pages. I have also included a picture of the source code from the browser to show it is there but other than that the only warning is a script type reference which is part of MDBs cdn. 
 
+---
+
 Please find all HTML validation screenshots [here.](/documentation/HTML-VALIDATION.md)
 
 ### CSS
@@ -20,11 +22,23 @@ The website only has two CSS files. One of which Jigsaw could not find by URI fo
 
 I have included them here in this TESTING file as there is only two.
 
-#### style.css
-![style.css](/documentation/jigsaw-style.css.png)
+<details> 
+<summary>
+style.css
+</summary>
 
-#### bookings-style.css
+![style.css](/documentation/jigsaw-style.css.png)
+</details>
+
+<details> 
+<summary>
+bookings-style.css
+</summary>
+
 ![bookings-style.css](/documentation/jigsaw-bookings-style.css.png)
+</details>
+
+--- 
 
 ### JavaScript
 
@@ -34,11 +48,25 @@ The website features two small JS files app.js controls the message alerts while
 
 I have included them here is this TESTING file as there is only two.
 
-#### app.js
-![app.js](/documentation/jshint-app.js.png)
 
-#### bookings-app.js
+
+<details> 
+<summary>
+app.js
+</summary>
+
+![app.js](/documentation/jshint-app.js.png)
+</details>
+
+<details> 
+<summary>
+bookings-app.js
+</summary>
+
 ![app.js](/documentation/jshint-bookings-app.js.png)
+</details>
+
+---
 
 ### Python 
 
@@ -47,6 +75,8 @@ I have included them here is this TESTING file as there is only two.
 All files were passed through Code Institutes liniting app which were all returned as PEP8 compliant. 
 
 You can find Screenshots of all validation [Here.](/documentation/PEP8-VALIDATION.md)
+
+---
 
 ## Manual Testing 
 

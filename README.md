@@ -6,9 +6,39 @@ Simply Service is a hospitality app designed to be the one stop shop for restaur
 
 [Link to Simply | Service](https://simply-service.herokuapp.com/)
 
+## **Contents**
+
+1. [U/X](#ux)
+    - [The Strategy Plane](#strategy-plane)
+        - [Agile Planning](#agile-planning)  
+        - [Epics and tasks](#epics-and-tasks)
+    - [The Scope Plane](#scope-plane) 
+    - [The Structure Plane](#structure-plane)  
+      - [Features](#features)  
+        - [Navbar](#navbar)
+        - [Hero/Landing](#hero/landing)
+        - [Wireframes](#wireframes)
+   - [The Surface Plane](#the-surface-plane) 
+      - [Design](#design)   
+        - [Colour pallette](#colour-pallette)
+        - [Typography](#typography)
+4. [Technologies Used](#technologies-used)  
+    - [Languages and frameworks used](#languages-and-frameworks-used)
+    - [Libraries and Django Plugins Used](#libraries-and-django-plugins-used)
+    - [Tools Used](#tools-used)
+    - [Linters used](#linters-used)
+6. [Deployment](#deployment)    
+    - [ElephantSQL DataBase](#elephantsql-database)
+    - [Cloudinary API](#cloudinary-api)
+    - [Heroku Deployment](#heroku-deployment)
+    - [Local Deployment](#local-deployment)
+5. [Testing](#testing)
+7. [Credits](#credits)
+8. [Acknowledgements](#acknowledgements)  
+
 # UX
 
-# The Stratagy Plane
+# Strategy Plane
 
 ## Agile Planning
 
@@ -81,25 +111,23 @@ Something planned for the future I will 100% add in my own time but having two t
 
 ---
 
-## Skeleton Plane
+# Skeleton Plane
 
-### Wireframes 
+## Wireframes 
 
 Using [Balsamiq](https://balsamiq.com/wireframes/) I created the skeleton and initial layout.
 
-### Schema
-
-## Scope Plane
+# Scope Plane
 
 - Landing page which conveys what the website is used for.
 - Allow a user to create an account which will then allow them to make, update and delete bookings.
 - Make sure the website is functional and presentable in all formats and screen sizes.
 
-## Structure Plane 
+# Structure Plane 
 
-### Features
+## Features
 
-#### Navbar
+### Navbar
 
 ![navbar](/documentation/navbar.png)
 ![navbar-closed](/documentation/navbar-closed.png)
@@ -109,25 +137,67 @@ Navbar was designed with the glass and 'clean' motif I had planned for the websi
 
 Options available change depending on the logged in status of the user.
 
-#### Hero/Landing 
+### Hero/Landing 
 
 ![Hero](/documentation/desktop-img.png)
 
-### Design 
+Simple Landing page with clean animation to draw the eyes to the explanation of the website. Book now button to bring you quickly to the booking system upon return visits.
 
-#### Colour pallette 
+### Restaurants
+
+![Restaurants](/documentation/restaurants.png)
+
+Info on Restaurants that can be booked with through the application.
+
+### Bookings
+
+![Bookings Page](/documentation/bookings_page.png)
+
+The main form for the website which takes in and creates bookings which are then displayed and can be edited and deleted. Upon completion of this form an email is also sent out to the customer. Certain fields are auto completed depending on the information given to the user profile.
+
+### Your Bookings 
+
+![Your Bookings](/documentation/your_bookings.png)
+
+This is where all Bookings under a certain account can be viewed. It give a basic breakdown of information and the ability to click into individual bookings to get more detail, update or delete the booking.
+
+### Bookings Detail 
+
+![Bookings Detail](/documentation/bookings_detail.png)
+
+This screen is an individual page generated for each booking where its information can be updated or deleted. 
+
+### Register
+
+![Register](/documentation/register.png)
+
+An small extension of All Auths user profile model. 
+
+### Login 
+
+![Login](/documentation/login.png)
+
+### Logout
+
+![Logout](/documentation/logout.png)
+
+# Surface Plane
+
+## Design 
+
+### Colour pallette 
 
 ![Colour pallette](/documentation/colour-pallette.png)
 
 I knew I wanted a light blue teal as the main colour throughout. Then instead of just a pure black the off black I have included contains a hint of blue. As a tertiary I thought having a unique colour for the usual error and delete red that I could use in other places too without having too many colors. Another "Colour" used throughout is a white with an alpha value of less than 1 with a blur effect added to give of a glassy feel.
 
-#### Typography 
+### Typography 
 
 For typography I decided to go for a singular font from [Google Fonts](https://fonts.google.com) called [Wix Madefor Display](https://fonts.google.com/specimen/Wix+Madefor+Display). After trying a few out I felt it meshes well with the soft, rounded feel I have aimed for with the design. 
 
 # Technologies Used
 
-### Languages and Frameworks Used
+## Languages and Frameworks Used
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
@@ -135,7 +205,8 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 -   [Python3](https://www.python.org/)
 -   [Django](https://www.djangoproject.com/)
 
-### Libraries and Django Plugins Used
+## Libraries and Django Plugins Used
+
 - [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used for the chevron arrows used for navigation through the site
 - [Bootstrap:](https://getbootstrap.com/)
@@ -147,7 +218,7 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 - [Django-Allauth:](https://django-allauth.readthedocs.io/en/latest/index.html)
     - Used to control user profile functionality.
 
-### Tools Used
+## Tools Used
 
 - [VScode](https://code.visualstudio.com/)
     - Vscode was my code editor for this project.
@@ -162,7 +233,7 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 - [Cloudinary:](https://cloudinary.com/)
     - Cloudinary is connected to the project but not fully utilized due to time constraints, future plans are to have it host pictures restaurants can use for their own generated 
 
-### Linters used 
+## Linters used 
 
 -   [W3C - HTML](https://validator.w3.org/)
 -   [Jigsaw - CSS](https://jigsaw.w3.org/css-validator/)
@@ -176,7 +247,7 @@ You can find all validation information in the [TESTING.md](/TESTING.md) file.
 
 The live deployed application can be found deployed on [Heroku](https://simply-service.herokuapp.com).
 
-### ElephantSQL Database
+## ElephantSQL Database
 
 This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
 
@@ -188,7 +259,7 @@ To obtain your own Postgres Database, sign-up with your GitHub account, then fol
 - Select the **Region** and **Data Center** closest to you.
 - Once created, click on the new database name, where you can view the database URL and Password.
 
-### Cloudinary API
+## Cloudinary API
 
 This project uses the [Cloudinary API](https://cloudinary.com) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
 
@@ -198,7 +269,7 @@ To obtain your own Cloudinary API key, create an account and log in.
 - On your Cloudinary Dashboard, you can copy your **API Environment Variable**.
 - Be sure to remove the `CLOUDINARY_URL=` as part of the API **value**; this is the **key**.
 
-### Heroku Deployment
+## Heroku Deployment
 
 This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
@@ -243,7 +314,7 @@ Or:
 
 The project should now be connected and deployed to Heroku!
 
-### Local Deployment
+## Local Deployment
 
 This project can be cloned or forked in order to make a local copy on your own system.
 
@@ -320,3 +391,9 @@ All Testing is documented separately in the [TESTING.md](/TESTING.md) file.
 - [Go directly to a section of a page with a django link](https://stackoverflow.com/questions/55055523/how-to-configure-django-url-to-point-to-a-specific-section-in-the-page)
 - [Update form instances](https://www.youtube.com/watch?v=jCM-m_3Ysqk)
 - [Help customizing all auth forms and models](https://dev.to/gajesh/the-complete-django-allauth-guide-la3)
+
+# Acknowledgements
+
+[Tim_nelson](https://tim.2bn.dev/) - My CI mentor who dug me out of more than a few holes with this project! 
+
+The CI slack channel for all the tips, tricks.
