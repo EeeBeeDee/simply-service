@@ -12,11 +12,41 @@ A strange warning appeared on some pages where it says there is no lang attribut
 
 Please find all HTML validation screenshots [here.](/documentation/HTML-VALIDATION.md)
 
+### CSS
+
+[Jigsaw - CSS](https://jigsaw.w3.org/css-validator/)
+
+The website only has two CSS files. One of which Jigsaw could not find by URI for whatever reason, so I had to use direct input to validate the other. Most flags are due to vendor extensions and the fact CSS variables are not statically checked.
+
+I have included them here in this TESTING file as there is only two.
+
+#### style.css
+![style.css](/documentation/jigsaw-style.css.png)
+
+#### bookings-style.css
+![bookings-style.css](/documentation/jigsaw-bookings-style.css.png)
+
+### JavaScript
+
+[JSHint - JS](https://jshint.com/)
+
+The website features two small JS files app.js controls the message alerts while bookings-app.js controls what dates can be picked while booking.
+
+I have included them here is this TESTING file as there is only two.
+
+#### app.js
+![app.js](/documentation/jshint-app.js.png)
+
+#### bookings-app.js
+![app.js](/documentation/jshint-bookings-app.js.png)
+
 ### Python 
 
 [CI Linter](https://pep8ci.herokuapp.com/)
 
-All files were passed through Code Institutes liniting app
+All files were passed through Code Institutes liniting app which were all returned as PEP8 compliant. 
+
+You can find Screenshots of all validation [Here.](/documentation/PEP8-VALIDATION.md)
 
 ## Manual Testing 
 
