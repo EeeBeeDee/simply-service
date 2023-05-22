@@ -170,6 +170,8 @@ For typography I decided to go for a singular font from [Google Fonts](https://f
 -   [PEP8CI - Python](https://pep8ci.herokuapp.com/)
 
 
+You can find all validation information in the [TESTING.md](/TESTING.md) file.
+
 # Deployment
 
 The live deployed application can be found deployed on [Heroku](https://simply-service.herokuapp.com).
