@@ -115,7 +115,27 @@ Something planned for the future I will 100% add in my own time but having two t
 
 ## Wireframes 
 
-Using [Balsamiq](https://balsamiq.com/wireframes/) I created the skeleton and initial layout.
+Using [Wireframe CC](https://wireframe.cc/) I created the skeleton and initial layout. Follow is the initial pages i had planned for minus the usual auth pages etc. 
+
+### Homepage
+
+![Homepage Wireframe](/documentation/Homepage-wireframe.png)
+
+### Restaurants
+
+![Restaurants Wireframe](/documentation/restaurants-wireframe.png)
+
+### Bookings
+
+![Bookings Wireframe](/documentation/bookings-wireframe.png)
+
+### Your Bookings
+
+![Your Bookings Wireframe](/documentation/Your_bookings-wireframes.png)
+
+### Bookings Detail
+
+![Bookings detail Wireframe](/documentation/Booking_detail-wireframes.png)
 
 # Scope Plane
 
