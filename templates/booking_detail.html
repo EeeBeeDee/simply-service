@@ -24,13 +24,25 @@
                 </div>
                 <div class="detail-flex mt-5">
                     <a href="{% url 'booking_update' booking.id %}"class="btn booking-btn">Update</a>
-                    <form action="{% url 'booking_detail' slug=booking.slug %}" method="post" >
-                        {% csrf_token %}
-                        <input type="submit" class="btn booking-btn cancel-btn" value="Cancel">
-                    </form>
+                     <input onclick="window.dialog.showModal();" type="submit" class="btn booking-btn cancel-btn" value="Cancel">
+
                 </div>
         </div>
     </div>
+
+    <dialog id="dialog" class="booking-detail-dialog mask-custom">
+       <button class="return close-dialog" onclick="window.dialog.close();">
+            <i class="fas fa-chevron-left"></i>
+       </button> 
+        <div class=" m-5 dialog-content">
+            <h2>Are you sure you would like to cancel?</h2>
+            <p>This will remove your booking from our system. We can not guarantee the same slot will be available at a later point.</p>
+            <form action="{% url 'booking_detail' slug=booking.slug %}" method="post" >
+                {% csrf_token %}
+                <input type="submit" class="btn booking-btn cancel-btn" value="Cancel">
+            </form>
+        </div>
+    </dialog>
    
 </section>
 

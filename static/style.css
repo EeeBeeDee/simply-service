@@ -475,7 +475,7 @@ header img {
     color: var(--tertiary-color);
 }
 
-/* Single Booking */
+/* Single Booking/ booking detail */
 
 .return {
     position: fixed;
@@ -527,6 +527,49 @@ header img {
 
 .cancel-btn:hover {
     background-color: red;
+}
+
+/* Booking Cancel modal */
+
+.booking-detail-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in;
+    width: 50rem;
+    max-width: 50vw;
+    height: 50rem;
+    max-height: 50vh;
+    overflow: hidden;
+    border: none;
+    border-radius: 3rem;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(5px);
+}
+
+.close-dialog {
+    top: 2rem;
+    background-color: transparent;
+    border: none;
+}
+
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-content h2 {
+    margin-top: 4rem;
+}
+
+.dialog-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0;
 }
 
 /* Account pages */
