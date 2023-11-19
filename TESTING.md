@@ -10,9 +10,10 @@ The website was run through the validator by URL instead of file to avoid issues
 
 A strange warning appeared on some pages where it says there is no lang attribute on some pages. I have also included a picture of the source code from the browser to show it is there but other than that the only warning is a script type reference which is part of MDBs cdn. 
 
+Please find all HTML validation screenshots [here.](/documentation/HTML-VALIDATION.md)
+
 ---
 
-Please find all HTML validation screenshots [here.](/documentation/HTML-VALIDATION.md)
 
 ### CSS
 
