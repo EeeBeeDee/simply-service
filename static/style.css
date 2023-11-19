@@ -685,9 +685,20 @@ form p input {
     background-color: aqua;
 }
 
-/* Error pages */
+/* Request Error Pages */
 
+.error-container {
+    height: 90vh;
+    font-size: 2rem;
+} 
 
+.error-heading {
+    font-size: 5rem;
+}
+
+.error-text {
+    font-size: 5rem;
+}
 
 /* Media quires */
 
