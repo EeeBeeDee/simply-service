@@ -748,6 +748,14 @@ form p input {
         font-size: 1.6rem;
         margin: 1rem 0;
     }
+
+    .error-heading {
+        font-size: 3rem;
+    }
+    
+    .error-text {
+        font-size: 1.6rem;
+    }
 }
 
 @media screen and (width < 500px) {
@@ -773,11 +781,5 @@ form p input {
         font-size: 1.2rem;
     }
 
-    .error-heading {
-        font-size: 3rem;
-    }
-    
-    .error-text {
-        font-size: 1.6rem;
-    }
+   
 }
