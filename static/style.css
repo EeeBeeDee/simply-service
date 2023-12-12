@@ -489,9 +489,9 @@ header img {
 }
 
 .booking-detail {
-    min-width: 70vw;
+    min-width: 50vw;
     min-height: 60vh;
-    max-width: 85vw;
+    max-width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -696,9 +696,19 @@ form p input {
 /* Request Error Pages */
 
 .error-container {
+    position: relative;
     height: 90vh;
     font-size: 2rem;
+    z-index: 7;
 } 
+
+.error-box {
+    min-width: 280px;
+    width: 50%;
+    margin: auto;
+    min-height: 30vh;
+    border-radius: 3rem;
+}
 
 .error-heading {
     font-size: 5rem;
@@ -761,5 +771,13 @@ form p input {
 
     .restaurant-blurb p {
         font-size: 1.2rem;
+    }
+
+    .error-heading {
+        font-size: 3rem;
+    }
+    
+    .error-text {
+        font-size: 1.6rem;
     }
 }
