@@ -100,3 +100,8 @@ def booking_update(request, id):
         "form": form,
     }
     return render(request, "booking_update.html", context)
+
+
+def booking2(request):
+
+    return render(request, "booking2.html")
