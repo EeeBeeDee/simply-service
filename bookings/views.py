@@ -103,5 +103,10 @@ def booking_update(request, id):
 
 
 def booking2(request):
+    user = get_object_or_404(UserProfile, username=request.user)
 
-    return render(request, "booking2.html")
+
+
+    form = BookingsForm(initial={'number': user.phone,
+                                     'email': user.email})
+    return render(request, "booking2.html", {'form': form})

@@ -1,12 +1,22 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
-<div class="row flex-column justify-content-center w-100" style="height: 100vh;">
-    <div class="bookings-img-container">
-        <img src="{% static 'homepage/img/hero.jpg' %}" alt="" class="bookings-img">
+<div class="row flex-column justify-content-center align-items-center gradient-bg" style="height: 100vh;">
+    
+    <div class="booking-form2">
+        <form action="/bookings/" method="POST" class="form">
+                <h1 class="form-title">Make your reservation</h1>
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.restaurant }}
+                    <span class="form-label">Restaurant</span>
+                </div>
+                <div class="form-group">
+                    {{ form.number }}
+                    <span class="form-label">Phone</span>
+                </div>
+        </form>
     </div>
-    <div class="bookings-box">
-        
-    </div>
+   
 </div>
 
 {% endblock content %}

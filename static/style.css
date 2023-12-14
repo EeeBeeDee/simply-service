@@ -261,7 +261,6 @@ header a:hover .down-arrow {
 
 .contained {
     margin: 0 auto;
-    width: 90%;
 }
 
 .blurb {
@@ -716,6 +715,47 @@ form p input {
 
 .error-text {
     font-size: 2rem;
+}
+
+/* booking form 2 */
+
+.booking-form2 {
+    height: 500px;
+    width: 800px;
+    position: relative;
+    background-image: url('./img/background.jpg');
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.booking-form2::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* backdrop-filter: blur(1px);
+    background-color: rgba(255, 255, 255, 0.6); */
+    z-index: -1;
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    z-index: 2;
+}
+
+.form-title {
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+}
+
+.form-group {
+    position: relative;
+    margin: 1rem;
 }
 
 /* Media quires */
