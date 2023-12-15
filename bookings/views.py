@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404, reverse
+from django.shortcuts import render, redirect, get_object_or_404, reverse, HttpResponse
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -102,11 +102,12 @@ def booking_update(request, id):
     return render(request, "booking_update.html", context)
 
 
-def booking2(request):
+def booking2(request, restaurant=""):
     user = get_object_or_404(UserProfile, username=request.user)
 
 
 
     form = BookingsForm(initial={'number': user.phone,
-                                     'email': user.email})
+                                    'email': user.email,
+                                    'restaurant': restaurant})
     return render(request, "booking2.html", {'form': form})

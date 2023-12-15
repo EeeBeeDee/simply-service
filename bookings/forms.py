@@ -32,13 +32,13 @@ class BookingsForm(forms.ModelForm):
                 'class': 'form-control',
                 'min': '1',
                 'max': '9',
-                'placeholder': 'no of adults',
+                'placeholder': 'number of adults',
             }),
             'no_of_children': NumberInput(attrs={
                 'class': 'form-control',
                 'min': '0',
                 'max': '9',
-                'placeholder': 'no of children',
+                'placeholder': 'number of children',
             }),
             'email': EmailInput(attrs={
                 'class': 'form-control',
