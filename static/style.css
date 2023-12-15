@@ -758,6 +758,34 @@ form p input {
     margin: 1rem;
 }
 
+.form-control {
+    height: 50px;
+    border-radius: 20px;
+    backdrop-filter: blur(1px);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.form-control:active,
+.form-control:focus {
+    border: #984447 5px solid;
+    outline: none;
+    box-shadow: none;
+}
+
+.
+
 /* Media quires */
 
 @media screen and (min-width: 640px) {
