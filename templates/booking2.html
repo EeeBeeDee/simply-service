@@ -10,29 +10,47 @@
                     <span class="form-label">Restaurant</span>
                     {{ form.restaurant }}
                 </div>
-                <div class="form-group">
-                    <span class="form-label">email</span>
-                    {{ form.email }}
+                <div class="row w-100">
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <span class="form-label">Phone</span>
+                            {{ form.number }}
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <span class="form-label">email</span>
+                            {{ form.email }}
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <span class="form-label">Phone</span>
-                    {{ form.number }}
+                <div class="row w-100">
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <span class="form-label">Time</span>
+                            {{ form.time }}
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <span class="form-label">Date</span>
+                            {{ form.date }}
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <span class="form-label">Time</span>
-                    {{ form.time }}
-                </div>
-                <div class="form-group">
-                    <span class="form-label">Date</span>
-                    {{ form.date }}
-                </div>
-                <div class="form-group">
-                    <span class="form-label">Adults</span>
-                    {{ form.no_of_adults }}
-                </div>
-                <div class="form-group">
-                    <span class="form-label">Children</span>
-                    {{ form.no_of_children }}
+                <div class="row w-100">
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <span class="form-label">Adults</span>
+                            {{ form.no_of_adults }}
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="form-group">
+                            <span class="form-label">Children</span>
+                            {{ form.no_of_children }}
+                        </div>
+                    </div>
                 </div>
                 <input type="submit" class="submit-btn" value="Book Now">
         </form>
