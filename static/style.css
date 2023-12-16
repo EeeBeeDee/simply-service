@@ -729,11 +729,9 @@ form p input {
 /* booking form 2 */
 
 .booking-form2 {
-    /* height: 500px; */
     width: 800px;
     max-width: 90%;
     position: relative;
-    background-image: url('./img/background.jpg');
     background-size: cover;
     border-radius: 20px;
     overflow: hidden;
@@ -745,10 +743,7 @@ form p input {
     content: '';
     position: absolute;
     inset: 0;
-    /* width: 110%; */
     background-color: rgba(0, 0, 0, 0.9);
-    /* backdrop-filter: blur(1px);
-    background-color: rgba(255, 255, 255, 0.6); */
     z-index: -1;
 } 
 

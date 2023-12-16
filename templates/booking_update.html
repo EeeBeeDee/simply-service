@@ -2,7 +2,7 @@
 
 <div class="row flex-column justify-content-center align-items-center gradient-bg" style="height: 100vh;">
 
-    <div class="booking-form2">
+    <div class="booking-form2" style="background-image: url({% static 'img/background.jpg'  %});">
 					<form method="post" action="{% url 'booking_update' booking.id %}" enctype="multipart/form-data" class="form">
                         <h1 class="form-title">Make your reservation</h1>
                         {% csrf_token %}
