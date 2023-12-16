@@ -13,11 +13,12 @@ from .forms import BookingsForm
 
 
 @login_required()
-def bookings(request):
+def bookings(request, restaurant=""):
     """
     Make a reservation page
     """
     user = get_object_or_404(UserProfile, username=request.user)
+
     form = BookingsForm()
     print(user.phone)
     if request.method == "POST":
@@ -51,8 +52,9 @@ def bookings(request):
                                      "made, please try again."))
     else:
         form = BookingsForm(initial={'number': user.phone,
-                                     'email': user.email})
-    return render(request, 'bookings.html', {'form': form})
+                                     'email': user.email,
+                                    'restaurant': restaurant})
+    return render(request, "booking2.html", {'form': form})
 
 
 class YourBookings(LoginRequiredMixin, View):
@@ -101,13 +103,3 @@ def booking_update(request, id):
     }
     return render(request, "booking_update.html", context)
 
-
-def booking2(request, restaurant=""):
-    user = get_object_or_404(UserProfile, username=request.user)
-
-
-
-    form = BookingsForm(initial={'number': user.phone,
-                                    'email': user.email,
-                                    'restaurant': restaurant})
-    return render(request, "booking2.html", {'form': form})
