@@ -17,7 +17,8 @@
                 <th class="th-right"></th>
                 <th>Adults/Kids</th>
                 <th>Restaurant</th>
-                <th class="th-left">Date & Time</th>
+                <th class="th-left">Date</th>
+                <!-- <th class="th-left d-none d-lg-block">Date & Time</th> -->
             </tr>
         </thead>
         <tbody>
@@ -27,7 +28,8 @@
                     <td class="view-btn"><a class="btn" href="{% url 'booking_detail' booking.slug %}">View</a></td>
                     <td>{{booking.no_of_adults}}/{{booking.no_of_children}}</td>
                     <td>{{ booking.restaurant }}</td>
-                    <td style="direction: ltr;">{{ booking.time }} on {{ booking.date }}</td>
+                    <td class="d-none d-lg-block" style="direction: ltr;">{{ booking.time }} on {{ booking.date }}</td>
+                    <td class="d-lg-none" style="direction: ltr;">{{ booking.date }}</td>
                 </tr>
             
             {% endfor %}
