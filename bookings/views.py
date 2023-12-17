@@ -54,7 +54,7 @@ def bookings(request, restaurant=""):
         form = BookingsForm(initial={'number': user.phone,
                                      'email': user.email,
                                     'restaurant': restaurant})
-    return render(request, "booking2.html", {'form': form})
+    return render(request, "bookings.html", {'form': form})
 
 
 class YourBookings(LoginRequiredMixin, View):
