@@ -45,9 +45,9 @@ bookings-style.css
 
 [JSHint - JS](https://jshint.com/)
 
-The website features two small JS files app.js controls the message alerts while bookings-app.js controls what dates can be picked while booking.
+The website features one small JS file. app.js controls the message alerts.
 
-I have included them here is this TESTING file as there is only two.
+I have included it here is this TESTING file as there is only one.
 
 
 
@@ -59,13 +59,6 @@ app.js
 ![app.js](/documentation/jshint-app.js.png)
 </details>
 
-<details> 
-<summary>
-bookings-app.js
-</summary>
-
-![app.js](/documentation/jshint-bookings-app.js.png)
-</details>
 
 ---
 
@@ -76,6 +69,26 @@ bookings-app.js
 All files were passed through Code Institutes liniting app which were all returned as PEP8 compliant. 
 
 You can find Screenshots of all validation [Here.](/documentation/PEP8-VALIDATION.md)
+
+---
+
+## Bugs & Issues
+
+### Slow homepage load
+
+I found that on first load, the homepage loaded quite slowly. I finally found that the size of all images were over 2mb each and the resolution was very high. I resized all images using GIMP image editor and noticed a marked improvement. Not fully satisfied, after a bit of research I found that the dev tools' built in performance insight would be a good indication if the speed was good enough now.
+
+As seen below. the Largest Contentful Paint (LCP), Time To Interactive (TTI) and First Contentful Paint (FCP) all managed more than a passing score and DOM Content Loaded (DCL) was within an acceptable time frame.
+
+![performance insight](/documentation/performance-insight.png)
+
+### Contrast Issues
+
+Contrast was an issue flagged in my last submission and I wanted to find the best tool to help me with this, as my usual way of using Inspect on elements was not working on all my text and I feel this was how it potentially slipped past me in the first place. I assume it might have to do with the decent amount of backgrounds I have in this project with an Alpha value lower than 1.
+
+Again my search brought me to another built in tool in chromes Devtools, CSS Overview. Running its diagnostic test, it flagged 3 issues. 2 of which I have fixed and pulled the text contrast ratios up to at least a AA standard. The last one as seen below as the element I have highlighted in the picture, it seems to be connected to the animated text which is white itself but appears on that blue overlay, not the white that the diagnostic clams is its background.  
+
+![CSS Overview](/documentation/css-overview-contrast.png)
 
 ---
 
