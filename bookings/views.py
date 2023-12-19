@@ -53,11 +53,14 @@ def bookings(request, restaurant=""):
     else:
         form = BookingsForm(initial={'number': user.phone,
                                      'email': user.email,
-                                    'restaurant': restaurant})
+                                     'restaurant': restaurant})
     return render(request, "bookings.html", {'form': form})
 
 
 class YourBookings(LoginRequiredMixin, View):
+    """
+    View all bookings of the currently logged in user
+    """
 
     def get(self, request):
         bookings = Bookings.objects.filter(name=request.user)
@@ -71,6 +74,9 @@ class YourBookings(LoginRequiredMixin, View):
 
 @login_required()
 def booking_detail(request, slug):
+    """
+    View all details of a single booking belonging to the currently signed in user.
+    """
     bookings = Bookings.objects.filter()
     booking = get_object_or_404(bookings, slug=slug)
 
@@ -86,6 +92,9 @@ def booking_detail(request, slug):
 
 @login_required()
 def booking_update(request, id):
+    """
+    Update booking screen, accessed from bookings detail screen.
+    """
     booking = get_object_or_404(Bookings, id=id)
     form = BookingsForm(request.POST or None, instance=booking)
     if request.method == "POST":
