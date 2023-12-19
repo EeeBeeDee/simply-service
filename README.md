@@ -61,6 +61,7 @@ This includes the initial project setup, installing the framework, dependencies 
 
 This includes the model setup for the booking system and general connection to the DB.  Any extra apps will have their model set up included with them. 
 
+
 ---
 
 ### **Epic 3: Bookings**
@@ -228,6 +229,22 @@ I knew I wanted a light blue teal as the main colour throughout. Then instead of
 ### Typography 
 
 For typography I decided to go for a singular font from [Google Fonts](https://fonts.google.com) called [Wix Madefor Display](https://fonts.google.com/specimen/Wix+Madefor+Display). After trying a few out I felt it meshes well with the soft, rounded feel I have aimed for with the design. 
+
+## User stories
+
+### First time user goals
+-   As a first time user, I want to be easily navigate the website
+-   As a first time user, I want my viewing experience to be smooth on any device I use.
+-   As a first time user, I want the website's aim and goals to be easily understood and readily available.
+-   As a first time user, I want the registration and login systems quick and easily understood.
+-   As a first time user, I want it made clear to me any time significant change has been made.
+
+### Returning user goals
+- As a returning visitor, I want to feel like return visits will offer increasing value.
+- As a returning visitor, I want to easily find and alter information that was created during my previous visits.
+- As a returning visitor, I want to feel after this visit there will still be more reason for me to keep returning.
+
+---
 
 # Technologies Used
 
