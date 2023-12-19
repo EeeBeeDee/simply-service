@@ -178,7 +178,8 @@ ACCOUNT_FORMS = {
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_STORAGE = ('cloudinary_storage.storage.'
+                       'StaticHashedCloudinaryStorage')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
@@ -197,4 +198,3 @@ EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'simplyservice.bookings@gmail.com'
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_KEY')
 EMAIL_USE_TLS = True
-# EMAIL_USE_SSL = True

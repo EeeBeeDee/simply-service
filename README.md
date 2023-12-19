@@ -202,6 +202,19 @@ An small extension of All Auths user profile model.
 
 ![Logout](/documentation/logout.png)
 
+### Email service account 
+
+I wanted to try some sort of API integration that made sense and ended up deciding to integrate automatic emails.
+
+Using a google service account, the user receives an email upon first booking with all the info required.
+
+
+![Email recieved](/documentation/email-recieved.png)
+
+![Email settings](/documentation/email-settings.png)
+
+![Email code](/documentation/email-code.png)
+
 # Surface Plane
 
 ## Design 

@@ -13,7 +13,8 @@ class Bookings(models.Model):
         ('Mama Mia', 'Mama mia'),
 
     ]
-    restaurant = models.CharField(max_length=100, choices=RESTAURANTS, default='Tonys')
+    restaurant = models.CharField(max_length=100, choices=RESTAURANTS,
+                                  default='Tonys')
     time = models.TimeField()
     date = models.DateField()
     no_of_adults = models.CharField(max_length=2)

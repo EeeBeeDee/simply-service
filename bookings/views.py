@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404, reverse, HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -75,7 +75,8 @@ class YourBookings(LoginRequiredMixin, View):
 @login_required()
 def booking_detail(request, slug):
     """
-    View all details of a single booking belonging to the currently signed in user.
+    View all details of a single booking belonging to the currently signed
+    in user.
     """
     bookings = Bookings.objects.filter()
     booking = get_object_or_404(bookings, slug=slug)
@@ -111,4 +112,3 @@ def booking_update(request, id):
         "form": form,
     }
     return render(request, "booking_update.html", context)
-

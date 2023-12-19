@@ -19,9 +19,9 @@ Please find all HTML validation screenshots [here.](/documentation/HTML-VALIDATI
 
 [Jigsaw - CSS](https://jigsaw.w3.org/css-validator/)
 
-The website only has two CSS files. One of which Jigsaw could not find by URI for whatever reason, so I had to use direct input to validate the other. Most flags are due to vendor extensions and the fact CSS variables are not statically checked.
+The website only one CSS files. Most flags are due to vendor extensions and the fact CSS variables are not statically checked.
 
-I have included them here in this TESTING file as there is only two.
+I have included it here in this TESTING file as there is only one.
 
 <details> 
 <summary>
@@ -31,13 +31,6 @@ style.css
 ![style.css](/documentation/jigsaw-style.css.png)
 </details>
 
-<details> 
-<summary>
-bookings-style.css
-</summary>
-
-![bookings-style.css](/documentation/jigsaw-bookings-style.css.png)
-</details>
 
 --- 
 
